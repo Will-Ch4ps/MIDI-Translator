@@ -24,11 +24,15 @@ from backends import load_backend, BackendBundle
 from connectors import ConnectorRegistry
 from connectors.audio import AudioConnector
 from connectors.core import CoreConnector
+from connectors.discord import DiscordConnector
+from connectors.home_assistant import HomeAssistantConnector
 from connectors.http import HttpConnector
 from connectors.midi_out import MidiOutConnector
 from connectors.obs import ObsConnector
 from connectors.osc import OscConnector
+from connectors.reaper import ReaperConnector
 from connectors.shell import ShellConnector
+from connectors.spotify import SpotifyConnector
 from connectors.system import SystemConnector
 from connectors.universal import UniversalConnector
 from connectors.window import WindowConnector
@@ -80,6 +84,10 @@ class Runtime:
             HttpConnector(),
             OscConnector(),
             ObsConnector(),
+            SpotifyConnector(),
+            DiscordConnector(),
+            HomeAssistantConnector(),
+            ReaperConnector(),
             UniversalConnector(packs_dir=self.root / "presets" / "universal"),
         ]
 

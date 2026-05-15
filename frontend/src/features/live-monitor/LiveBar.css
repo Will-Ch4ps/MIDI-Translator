@@ -57,14 +57,29 @@
   font-size: 12.5px;
 }
 
+.livebar__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .livebar__row {
   display: grid;
-  grid-template-columns: 90px 140px 1fr 80px;
+  grid-template-columns: 90px 130px 110px 1fr 70px;
   gap: 12px;
   padding: 5px 8px;
   font-family: var(--font-mono);
   font-size: 11.5px;
   border-radius: 6px;
+}
+
+.livebar__ctrl {
+  color: var(--text-primary);
+}
+
+.livebar__action {
+  color: var(--text-secondary);
+  font-size: 11px;
 }
 
 .livebar__row--midi {

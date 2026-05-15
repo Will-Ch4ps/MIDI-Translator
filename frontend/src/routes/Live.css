@@ -1,9 +1,10 @@
 .live {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 18px;
   max-width: 1200px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .live__head {
@@ -14,28 +15,108 @@
 }
 
 .live__head h2 {
-  margin: 0;
-  font-size: 18px;
+  margin: 8px 0 4px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
 }
 
 .live__head p {
-  margin: 4px 0 0;
+  margin: 0;
   color: var(--text-muted);
   font-size: 13px;
+  font-family: var(--font-mono);
 }
 
-.live__grid {
+.live__metrics {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 10px;
 }
 
-.live__placeholder {
-  padding: 24px;
-  text-align: center;
-  border: 1px dashed var(--border-strong);
-  border-radius: var(--radius-lg);
+.live__metric-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--text-muted);
-  font-size: 13px;
+}
+
+.live__metric-value {
+  display: block;
+  margin: 8px 0 2px;
+  font-family: var(--font-mono);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.live__metric-value span {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.live__metric-value--text {
+  font-family: var(--font-ui);
+  font-size: 22px;
+}
+
+.live__metric-sub {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.live__cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 12px;
+  min-height: 0;
+  flex: 1;
+}
+
+.live__map-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 6px;
+}
+
+.live__map-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 11.5px;
+  transition: background var(--t-fast) var(--ease-out);
+}
+
+.live__map-name {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.live__map-count {
+  color: var(--accent-soft);
+  font-weight: 600;
+}
+
+.live__log-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.live__log-scroll {
+  margin-top: 12px;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
 }
