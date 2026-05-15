@@ -1,0 +1,30 @@
+[
+  {
+    "id": "myhouse.toggle_light",
+    "label": "Toggle luz (exemplo)",
+    "description": "Exemplo de webhook HTTP — edite ou apague.",
+    "icon": "lamp",
+    "category": "Casa",
+    "kind": "http",
+    "params": {
+      "method": "POST",
+      "url": "http://homeassistant.local:8123/api/services/light/toggle",
+      "headers": {"Authorization": "Bearer SEU_TOKEN"},
+      "body": "{\"entity_id\":\"light.sala\"}"
+    }
+  },
+  {
+    "id": "resolume.cena_1",
+    "label": "Resolume cena 1 (exemplo)",
+    "description": "Exemplo de OSC pra Resolume.",
+    "icon": "tv",
+    "category": "VJ",
+    "kind": "osc",
+    "params": {
+      "host": "127.0.0.1",
+      "port": 7000,
+      "address": "/composition/columns/1/connect",
+      "args": "i:1"
+    }
+  }
+]
