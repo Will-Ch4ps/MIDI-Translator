@@ -1,0 +1,44 @@
+.choice {
+  display: inline-flex;
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  gap: 2px;
+}
+
+.choice__btn {
+  position: relative;
+  padding: 6px 14px;
+  border: 0;
+  background: transparent;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: color var(--t-fast) var(--ease-out);
+}
+
+.choice__btn:hover {
+  color: var(--text-primary);
+}
+
+.choice__btn--active {
+  color: var(--text-primary);
+}
+
+.choice__active {
+  position: absolute;
+  inset: 0;
+  background: var(--raised);
+  border-radius: var(--radius-sm);
+  z-index: 0;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.choice__btn > span:first-child {
+  position: relative;
+  z-index: 1;
+}

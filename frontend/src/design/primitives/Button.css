@@ -1,0 +1,108 @@
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  border: 1px solid transparent;
+  transition: background var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out),
+    box-shadow var(--t-base) var(--ease-out),
+    transform var(--t-base) var(--ease-out);
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+}
+
+.ui-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ui-btn--full {
+  width: 100%;
+}
+
+.ui-btn--sm {
+  padding: 4px 10px;
+  font-size: 12px;
+  height: 28px;
+}
+
+.ui-btn--md {
+  padding: 6px 14px;
+  font-size: 13px;
+  height: 34px;
+}
+
+.ui-btn--lg {
+  padding: 8px 18px;
+  font-size: 14px;
+  height: 42px;
+}
+
+.ui-btn--primary {
+  background: linear-gradient(180deg, var(--accent-soft), var(--accent));
+  color: white;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) inset,
+    0 4px 16px rgba(124, 92, 255, 0.4);
+}
+.ui-btn--primary:hover:not(:disabled) {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.22) inset,
+    0 6px 22px rgba(124, 92, 255, 0.55);
+}
+
+.ui-btn--secondary {
+  background: var(--elevated);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+.ui-btn--secondary:hover:not(:disabled) {
+  background: var(--raised);
+  border-color: var(--border-strong);
+}
+
+.ui-btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+.ui-btn--ghost:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+}
+
+.ui-btn--subtle {
+  background: var(--accent-bg);
+  color: var(--accent-soft);
+}
+.ui-btn--subtle:hover:not(:disabled) {
+  background: rgba(124, 92, 255, 0.2);
+}
+
+.ui-btn--danger {
+  background: rgba(255, 102, 128, 0.12);
+  color: var(--red);
+  border-color: rgba(255, 102, 128, 0.3);
+}
+.ui-btn--danger:hover:not(:disabled) {
+  background: rgba(255, 102, 128, 0.2);
+}
+
+.ui-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-btn__icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+.ui-btn__label {
+  display: inline-flex;
+  align-items: center;
+}

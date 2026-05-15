@@ -1,0 +1,99 @@
+.ui-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  transition: transform var(--t-base) var(--ease-out),
+    border-color var(--t-base) var(--ease-out),
+    box-shadow var(--t-base) var(--ease-out);
+}
+
+.ui-card--surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.ui-card--elevated {
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-raised);
+}
+.ui-card--glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.ui-card--p-none {
+  padding: 0;
+}
+.ui-card--p-sm {
+  padding: var(--space-md);
+}
+.ui-card--p-md {
+  padding: var(--space-lg);
+}
+.ui-card--p-lg {
+  padding: var(--space-xl);
+}
+
+.ui-card--interactive {
+  cursor: pointer;
+}
+.ui-card--interactive:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.ui-card--glow {
+  box-shadow: var(--shadow-raised), 0 0 0 1px var(--accent-glow);
+}
+.ui-card--glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    140deg,
+    rgba(124, 92, 255, 0.2),
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ui-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ui-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.ui-card__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.ui-card__desc {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.ui-card__footer {
+  margin-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  justify-content: flex-end;
+}

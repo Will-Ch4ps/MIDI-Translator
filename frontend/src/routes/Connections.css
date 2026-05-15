@@ -1,0 +1,77 @@
+.conn {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.conn__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.conn__head h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.conn__head p {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.conn__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.conn__cat-title {
+  margin: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.conn__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+
+.conn__card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.conn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(140deg, var(--accent-bg), transparent);
+  border: 1px solid rgba(124, 92, 255, 0.2);
+  color: var(--accent-soft);
+}
+
+.conn__card-foot {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.conn__count {
+  font-size: 11px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,167 @@
+/* Reset moderno + estilos globais do MIDI Studio. */
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(
+      ellipse at top left,
+      rgba(124, 92, 255, 0.08) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(79, 209, 224, 0.06) 0%,
+      transparent 60%
+    ),
+    var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color var(--t-fast) var(--ease-out),
+    box-shadow var(--t-fast) var(--ease-out);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--raised);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
+::selection {
+  background: var(--accent-bg);
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--accent-soft);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: linear-gradient(180deg, var(--elevated), var(--surface));
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.dot-green {
+  background: var(--green);
+  box-shadow: 0 0 8px rgba(62, 230, 168, 0.6);
+}
+.dot-amber {
+  background: var(--amber);
+  box-shadow: 0 0 8px rgba(255, 188, 74, 0.6);
+}
+.dot-red {
+  background: var(--red);
+  box-shadow: 0 0 8px rgba(255, 102, 128, 0.6);
+}
+.dot-muted {
+  background: var(--text-muted);
+}
+.dot-pulse {
+  animation: dot-pulse 1.6s ease-out infinite;
+}
+
+@keyframes dot-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.5;
+  }
+}

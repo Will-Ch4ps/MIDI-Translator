@@ -1,0 +1,96 @@
+/** Dados de fallback usados no dev browser (sem Tauri rodando). */
+import type { Bootstrap } from './backend';
+
+export const mockBootstrap: Bootstrap = {
+  platform: { os: 'windows', display_server: '', desktop: '' },
+  active_device_id: 'starrykey25',
+  devices: [
+    {
+      id: 'starrykey25',
+      name: 'StarryKey 25',
+      author: 'Donner',
+      description: '',
+      state_machine: {},
+      controls: [
+        ...Array.from({ length: 8 }).map((_, i) => ({
+          id: `PAD_A${i + 1}`,
+          name: `Pad A${i + 1}`,
+          kind: 'pad' as const,
+          signature: `note:9:${36 + i}`,
+          position: { x: 4 + (i % 4) * 1.2, y: Math.floor(i / 4) * 1.2, w: 1.1, h: 1.1 },
+          group: 'pads',
+          params: { note: 36 + i, channel: 10, bank: 'A' },
+        })),
+        ...Array.from({ length: 4 }).map((_, i) => ({
+          id: `KNOB_${i + 1}`,
+          name: `Knob ${i + 1}`,
+          kind: 'knob_abs' as const,
+          signature: `cc:1:${20 + i}`,
+          position: { x: 10 + i * 1.4, y: 0, w: 1.2, h: 1.2 },
+          group: 'knobs',
+          params: { cc: 20 + i, channel: 2 },
+        })),
+        ...['A', 'B', 'C', 'D'].map((letter, i) => ({
+          id: `BTN_${letter}`,
+          name: `Button ${letter}`,
+          kind: 'button_toggle' as const,
+          signature: `cc:2:${59 + i}`,
+          position: { x: 4 + i * 1.2, y: 4, w: 1.0, h: 0.8 },
+          group: 'buttons',
+          params: { cc: 59 + i, channel: 3 },
+        })),
+      ],
+    },
+  ],
+  profile: {
+    name: 'Meu setup',
+    device_id: 'starrykey25',
+    layers: [
+      { id: 'default', name: 'Default', color: '#7c5cff', description: '' },
+      { id: 'foco', name: 'Modo Foco', color: '#3ee6a8', description: '' },
+    ],
+    mappings: [
+      {
+        control_id: 'PAD_A1',
+        action: { id: 'audio.volume.mute_toggle', params: { target: 'spotify' } },
+        trigger: 'press',
+        label: 'Spotify mute',
+        layer: 'default',
+        condition: { type: 'always', params: {} },
+        tags: [],
+      },
+      {
+        control_id: 'KNOB_1',
+        action: { id: 'audio.volume.set', params: { target: 'master' } },
+        trigger: 'press',
+        label: 'Volume master',
+        layer: 'default',
+        condition: { type: 'always', params: {} },
+        tags: [],
+      },
+    ],
+    active_layer: 'default',
+    requires_connections: [],
+  },
+  connectors: [
+    { id: 'core', name: 'Atalhos & Teclado', description: 'Combos, texto, mouse e clipboard.', icon: 'keyboard', category: 'Sistema', requires_setup: false, auto_detect: true, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'ready', action_count: 8 },
+    { id: 'audio', name: 'Áudio', description: 'Volume master e por aplicação, mute, mídia.', icon: 'volume-2', category: 'Áudio', requires_setup: false, auto_detect: true, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'ready', action_count: 8 },
+    { id: 'shell', name: 'Aplicativos & Scripts', description: 'Abrir programas, atalhos, comandos e scripts.', icon: 'terminal', category: 'Sistema', requires_setup: false, auto_detect: true, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'ready', action_count: 3 },
+    { id: 'window', name: 'Janelas', description: 'Snap, foco, alt+tab e virtual desktops.', icon: 'layout-grid', category: 'Sistema', requires_setup: false, auto_detect: true, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'ready', action_count: 8 },
+    { id: 'system', name: 'Sistema', description: 'Lock, notify, sleep, brilho, screenshot.', icon: 'settings', category: 'Sistema', requires_setup: false, auto_detect: true, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'ready', action_count: 5 },
+    { id: 'midi_out', name: 'MIDI Out', description: 'Envia MIDI e acende LEDs do controlador.', icon: 'circuit-board', category: 'MIDI', requires_setup: true, auto_detect: false, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'installed', action_count: 2 },
+    { id: 'http', name: 'HTTP / Webhook', description: 'GET/POST/PUT pra qualquer endpoint.', icon: 'webhook', category: 'Integrações', requires_setup: false, auto_detect: true, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'ready', action_count: 1 },
+    { id: 'osc', name: 'OSC', description: 'Open Sound Control via UDP.', icon: 'radio', category: 'MIDI', requires_setup: true, auto_detect: false, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'ready', action_count: 1 },
+    { id: 'obs', name: 'OBS Studio', description: 'Trocar cenas, mute mic, streaming/recording.', icon: 'video', category: 'Streaming', requires_setup: true, auto_detect: true, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'missing', action_count: 7 },
+    { id: 'universal', name: 'Customizado (JSON)', description: 'Ações declaradas em JSON sem código.', icon: 'puzzle', category: 'Integrações', requires_setup: false, auto_detect: true, docs_url: '', platforms: ['windows', 'linux'], keywords: [], status: 'ready', action_count: 2 },
+  ],
+  actions: [],
+  preset_packs: [
+    { id: 'obs-streaming', name: 'OBS Streaming Essentials', description: 'Trocar cenas, mute mic, replay buffer.', icon: 'video', category: 'Streaming', requires_connections: ['obs'], suggested_targets: [{ role: 'pads', count: 4, hint: 'qualquer banco' }, { role: 'button', count: 1, hint: 'mute mic' }] },
+    { id: 'spotify-quick', name: 'Spotify Quick Controls', description: 'Play/pause, next, prev, volume.', icon: 'music', category: 'Música', requires_connections: ['audio'], suggested_targets: [{ role: 'pads', count: 3, hint: '' }, { role: 'knobs', count: 1, hint: 'volume Spotify' }] },
+    { id: 'discord-ptt', name: 'Discord Push-to-Talk', description: 'PTT global e mute server.', icon: 'mic', category: 'Comunicação', requires_connections: ['core'], suggested_targets: [{ role: 'pads', count: 2, hint: '' }] },
+    { id: 'photoshop-pro', name: 'Photoshop Pro Shortcuts', description: 'Undo, brush size, layers.', icon: 'image', category: 'Foto/Vídeo', requires_connections: ['core'], suggested_targets: [{ role: 'pads', count: 8, hint: '' }, { role: 'knobs', count: 2, hint: '' }] },
+  ],
+  midi_input_ports: ['STARRYKEY 25 0'],
+  midi_output_ports: ['Microsoft GS Wavetable Synth 0', 'STARRYKEY 25 1'],
+};

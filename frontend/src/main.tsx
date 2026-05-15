@@ -1,14 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { App } from "./App";
-import "./styles/base.css";
-import "./styles/layout.css";
-import "./styles/device.css";
-import "./styles/inspector.css";
-import "./styles/action-editor.css";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { AppShell } from './shell/AppShell';
+import './design/globals.css';
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const root = document.getElementById('root');
+if (!root) throw new Error('root element não encontrado');
+
+createRoot(root).render(
+  <StrictMode>
+    <AppShell />
+  </StrictMode>,
 );

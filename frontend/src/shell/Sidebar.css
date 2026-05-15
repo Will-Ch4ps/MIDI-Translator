@@ -1,0 +1,121 @@
+.sidebar {
+  position: relative;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px;
+  gap: 4px;
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+  z-index: 5;
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 8px 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.sidebar__logo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--cyan));
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.sidebar__logo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.85);
+}
+.sidebar__logo-dot:nth-child(3) {
+  grid-column: span 2;
+  width: 18px;
+  height: 4px;
+  border-radius: 2px;
+  justify-self: center;
+}
+
+.sidebar__brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar__brand-name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.sidebar__brand-sub {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.sidebar__footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.sidebar__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: color var(--t-fast) var(--ease-out);
+}
+
+.sidebar__item:hover {
+  color: var(--text-primary);
+}
+
+.sidebar__item--active {
+  color: var(--text-primary);
+}
+
+.sidebar__icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+}
+
+.sidebar__label {
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar__active-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--accent-bg);
+  border: 1px solid rgba(124, 92, 255, 0.25);
+  border-radius: var(--radius-md);
+  z-index: 0;
+}

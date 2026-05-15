@@ -1,0 +1,42 @@
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.app__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.app__content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px 28px 16px;
+}
+
+.boot-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: var(--text-muted);
+  font-size: 14px;
+  gap: 8px;
+}
+
+.boot-state strong {
+  color: var(--red);
+  font-size: 15px;
+}
+
+.boot-state--error {
+  color: var(--text-secondary);
+}

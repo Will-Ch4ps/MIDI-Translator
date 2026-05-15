@@ -1,0 +1,25 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.settings__head h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.settings__head p {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.settings__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}

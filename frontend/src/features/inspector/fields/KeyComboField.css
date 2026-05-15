@@ -1,0 +1,100 @@
+.kc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kc__capture {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  min-height: 52px;
+  transition: border-color var(--t-fast) var(--ease-out),
+    box-shadow var(--t-base) var(--ease-out);
+}
+
+.kc__capture--live {
+  border-color: var(--accent);
+  background: linear-gradient(140deg, rgba(124, 92, 255, 0.1), var(--elevated));
+  box-shadow: 0 0 0 3px var(--accent-bg), 0 12px 36px rgba(124, 92, 255, 0.2);
+  animation: kc-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes kc-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px var(--accent-bg), 0 12px 36px rgba(124, 92, 255, 0.2); }
+  50% { box-shadow: 0 0 0 6px rgba(124, 92, 255, 0.12), 0 16px 44px rgba(124, 92, 255, 0.3); }
+}
+
+.kc__keys {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  min-width: 0;
+}
+
+.kc__key {
+  height: 26px !important;
+  padding: 0 8px !important;
+  font-size: 12px !important;
+}
+
+.kc__placeholder {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.kc__capture-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.kc__suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kc__sug-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kc__sug-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.kc__sug {
+  padding: 3px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out);
+}
+
+.kc__sug:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.kc__sug--active {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent-soft);
+}
