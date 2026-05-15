@@ -1,0 +1,39 @@
+{
+  "name": "__swap_test__",
+  "device_name": null,
+  "mappings": [
+    {
+      "control_id": "PAD_A2",
+      "action": {
+        "type": "key",
+        "params": {
+          "combo": "f13"
+        }
+      },
+      "label": "",
+      "trigger": "press"
+    },
+    {
+      "control_id": "PAD_A2",
+      "action": {
+        "type": "key",
+        "params": {
+          "combo": "f14"
+        }
+      },
+      "label": "",
+      "trigger": "double"
+    },
+    {
+      "control_id": "PAD_A1",
+      "action": {
+        "type": "key",
+        "params": {
+          "combo": "f15"
+        }
+      },
+      "label": "",
+      "trigger": "press"
+    }
+  ]
+}

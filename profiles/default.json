@@ -1,0 +1,147 @@
+{
+  "name": "default",
+  "device_name": null,
+  "mappings": [
+    {
+      "control_id": "PAD_B3",
+      "action": {
+        "type": "app_launch",
+        "params": {
+          "path": "C:\\Users\\Ch4ps\\AppData\\Local\\Programs\\Blitz\\Blitz.exe"
+        }
+      },
+      "label": "Blitz",
+      "trigger": "press"
+    },
+    {
+      "control_id": "PAD_A1",
+      "action": {
+        "type": "script",
+        "params": {
+          "args": "",
+          "path": "D:\\DevTool\\dev-tools-hub-pro\\StartApp.vbs"
+        }
+      },
+      "label": "Dev tools",
+      "trigger": "press"
+    },
+    {
+      "control_id": "PAD_A5",
+      "action": {
+        "type": "script",
+        "params": {
+          "args": "",
+          "path": "C:\\Users\\Ch4ps\\Desktop\\NoteChaps\\StartApp.vbs"
+        }
+      },
+      "label": "NoteChaps",
+      "trigger": "press"
+    },
+    {
+      "control_id": "PAD_A8",
+      "action": {
+        "type": "key",
+        "params": {
+          "combo": "alt+tab",
+          "mode": "tap"
+        }
+      },
+      "label": "ALT+TAB",
+      "trigger": "press"
+    },
+    {
+      "control_id": "PAD_B2",
+      "action": {
+        "type": "app_launch",
+        "params": {
+          "path": "\"D:\\Riot Games\\Riot Client\\RiotClientServices.exe\" --launch-product=league_of_legends --launch-patchline=live"
+        }
+      },
+      "label": "LOL",
+      "trigger": "press"
+    },
+    {
+      "control_id": "PAD_A2",
+      "action": {
+        "type": "app_launch",
+        "params": {
+          "path": "C:\\Users\\Ch4ps\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+        }
+      },
+      "label": "VSCode",
+      "trigger": "press"
+    },
+    {
+      "control_id": "PAD_A3",
+      "action": {
+        "type": "app_launch",
+        "params": {
+          "path": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.506.3741.0_x64__2p2nqsd0c76g0\\app\\Codex.exe"
+        }
+      },
+      "label": "Codex",
+      "trigger": "press"
+    },
+    {
+      "control_id": "PAD_B4",
+      "action": {
+        "type": "app_launch",
+        "params": {
+          "path": "C:\\Users\\Ch4ps\\AppData\\Local\\Discord\\app-1.0.9236\\Discord.exe"
+        }
+      },
+      "label": "Discord",
+      "trigger": "press"
+    },
+    {
+      "control_id": "PAD_B1",
+      "action": {
+        "type": "app_launch",
+        "params": {
+          "path": "shell:AppsFolder\\SpotifyAB.SpotifyMusic_zpdnekdrzrea0!Spotify"
+        }
+      },
+      "label": "Spotify",
+      "trigger": "press"
+    },
+    {
+      "control_id": "KNOB_1",
+      "action": {
+        "type": "volume_set",
+        "params": {
+          "invert": false,
+          "knob_mode": "auto",
+          "target": "master"
+        }
+      },
+      "label": "Master",
+      "trigger": "press"
+    },
+    {
+      "control_id": "KNOB_2",
+      "action": {
+        "type": "volume_set",
+        "params": {
+          "invert": false,
+          "knob_mode": "auto",
+          "target": "spotify.exe"
+        }
+      },
+      "label": "Spotify",
+      "trigger": "press"
+    },
+    {
+      "control_id": "KNOB_4",
+      "action": {
+        "type": "volume_set",
+        "params": {
+          "invert": false,
+          "knob_mode": "auto",
+          "target": "discord.exe"
+        }
+      },
+      "label": "Discord",
+      "trigger": "press"
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "name": "StarryKey 25",
+  "author": "Donner",
+  "controls": [
+    {
+      "id": "PAD_A1",
+      "label": "Pad A1",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "A",
+        "position": 0,
+        "note": 36,
+        "channel": 7
+      },
+      "signature": "note:6:36"
+    },
+    {
+      "id": "PAD_A2",
+      "label": "Pad A2",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "A",
+        "position": 1,
+        "note": 37,
+        "channel": 7
+      },
+      "signature": "note:6:37"
+    },
+    {
+      "id": "PAD_A3",
+      "label": "Pad A3",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "A",
+        "position": 2,
+        "note": 38,
+        "channel": 7
+      },
+      "signature": "note:6:38"
+    },
+    {
+      "id": "PAD_A4",
+      "label": "Pad A4",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "A",
+        "position": 3,
+        "note": 39,
+        "channel": 7
+      },
+      "signature": "note:6:39"
+    },
+    {
+      "id": "PAD_A5",
+      "label": "Pad A5",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "A",
+        "position": 4,
+        "note": 40,
+        "channel": 7
+      },
+      "signature": "note:6:40"
+    },
+    {
+      "id": "PAD_A6",
+      "label": "Pad A6",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "A",
+        "position": 5,
+        "note": 41,
+        "channel": 7
+      },
+      "signature": "note:6:41"
+    },
+    {
+      "id": "PAD_A7",
+      "label": "Pad A7",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "A",
+        "position": 6,
+        "note": 42,
+        "channel": 7
+      },
+      "signature": "note:6:42"
+    },
+    {
+      "id": "PAD_A8",
+      "label": "Pad A8",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "A",
+        "position": 7,
+        "note": 43,
+        "channel": 7
+      },
+      "signature": "note:6:43"
+    },
+    {
+      "id": "PAD_B1",
+      "label": "Pad B1",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "B",
+        "position": 0,
+        "note": 44,
+        "channel": 7
+      },
+      "signature": "note:6:44"
+    },
+    {
+      "id": "PAD_B2",
+      "label": "Pad B2",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "B",
+        "position": 1,
+        "note": 45,
+        "channel": 7
+      },
+      "signature": "note:6:45"
+    },
+    {
+      "id": "PAD_B3",
+      "label": "Pad B3",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "B",
+        "position": 2,
+        "note": 46,
+        "channel": 7
+      },
+      "signature": "note:6:46"
+    },
+    {
+      "id": "PAD_B4",
+      "label": "Pad B4",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "B",
+        "position": 3,
+        "note": 47,
+        "channel": 7
+      },
+      "signature": "note:6:47"
+    },
+    {
+      "id": "PAD_B5",
+      "label": "Pad B5",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "B",
+        "position": 4,
+        "note": 48,
+        "channel": 7
+      },
+      "signature": "note:6:48"
+    },
+    {
+      "id": "PAD_B6",
+      "label": "Pad B6",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "B",
+        "position": 5,
+        "note": 49,
+        "channel": 7
+      },
+      "signature": "note:6:49"
+    },
+    {
+      "id": "PAD_B7",
+      "label": "Pad B7",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "B",
+        "position": 6,
+        "note": 50,
+        "channel": 7
+      },
+      "signature": "note:6:50"
+    },
+    {
+      "id": "PAD_B8",
+      "label": "Pad B8",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "B",
+        "position": 7,
+        "note": 51,
+        "channel": 7
+      },
+      "signature": "note:6:51"
+    },
+    {
+      "id": "PAD_C1",
+      "label": "Pad C1",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "C",
+        "position": 0,
+        "note": 52,
+        "channel": 7
+      },
+      "signature": "note:6:52"
+    },
+    {
+      "id": "PAD_C2",
+      "label": "Pad C2",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "C",
+        "position": 1,
+        "note": 53,
+        "channel": 7
+      },
+      "signature": "note:6:53"
+    },
+    {
+      "id": "PAD_C3",
+      "label": "Pad C3",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "C",
+        "position": 2,
+        "note": 54,
+        "channel": 7
+      },
+      "signature": "note:6:54"
+    },
+    {
+      "id": "PAD_C4",
+      "label": "Pad C4",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "C",
+        "position": 3,
+        "note": 55,
+        "channel": 7
+      },
+      "signature": "note:6:55"
+    },
+    {
+      "id": "PAD_C5",
+      "label": "Pad C5",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "C",
+        "position": 4,
+        "note": 56,
+        "channel": 7
+      },
+      "signature": "note:6:56"
+    },
+    {
+      "id": "PAD_C6",
+      "label": "Pad C6",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "C",
+        "position": 5,
+        "note": 57,
+        "channel": 7
+      },
+      "signature": "note:6:57"
+    },
+    {
+      "id": "PAD_C7",
+      "label": "Pad C7",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "C",
+        "position": 6,
+        "note": 58,
+        "channel": 7
+      },
+      "signature": "note:6:58"
+    },
+    {
+      "id": "PAD_C8",
+      "label": "Pad C8",
+      "group": "pads",
+      "type": "pad_bank",
+      "params": {
+        "bank": "C",
+        "position": 7,
+        "note": 59,
+        "channel": 7
+      },
+      "signature": "note:6:59"
+    },
+    {
+      "id": "KNOB_1",
+      "label": "KNOB 1",
+      "group": "knobs",
+      "type": "knob_absolute",
+      "params": {
+        "cc": 20,
+        "channel": 2
+      },
+      "signature": "cc:1:20"
+    },
+    {
+      "id": "KNOB_2",
+      "label": "KNOB 2",
+      "group": "knobs",
+      "type": "knob_absolute",
+      "params": {
+        "cc": 21,
+        "channel": 2
+      },
+      "signature": "cc:1:21"
+    },
+    {
+      "id": "KNOB_3",
+      "label": "KNOB 3",
+      "group": "knobs",
+      "type": "knob_absolute",
+      "params": {
+        "cc": 22,
+        "channel": 2
+      },
+      "signature": "cc:1:22"
+    },
+    {
+      "id": "KNOB_4",
+      "label": "KNOB 4",
+      "group": "knobs",
+      "type": "knob_absolute",
+      "params": {
+        "cc": 23,
+        "channel": 2
+      },
+      "signature": "cc:1:23"
+    },
+    {
+      "id": "BTN_A",
+      "label": "Button A",
+      "group": "buttons",
+      "type": "button_toggle",
+      "params": {
+        "cc": 59,
+        "channel": 3,
+        "mode": "toggle"
+      },
+      "signature": "cc:2:59"
+    },
+    {
+      "id": "BTN_B",
+      "label": "Button B",
+      "group": "buttons",
+      "type": "button_toggle",
+      "params": {
+        "cc": 60,
+        "channel": 3,
+        "mode": "toggle"
+      },
+      "signature": "cc:2:60"
+    },
+    {
+      "id": "BTN_C",
+      "label": "Button C",
+      "group": "buttons",
+      "type": "button_toggle",
+      "params": {
+        "cc": 61,
+        "channel": 3,
+        "mode": "toggle"
+      },
+      "signature": "cc:2:61"
+    },
+    {
+      "id": "BTN_D",
+      "label": "Button D",
+      "group": "buttons",
+      "type": "button_toggle",
+      "params": {
+        "cc": 62,
+        "channel": 3,
+        "mode": "toggle"
+      },
+      "signature": "cc:2:62"
+    },
+    {
+      "id": "PITCH",
+      "label": "Pitch Bend",
+      "group": "special",
+      "type": "pitch_bend",
+      "params": {
+        "channel": 4
+      },
+      "signature": "pitch:3:0"
+    },
+    {
+      "id": "MOD",
+      "label": "MOD",
+      "group": "knobs",
+      "type": "knob_absolute",
+      "params": {
+        "cc": 1,
+        "channel": 5
+      },
+      "signature": "cc:4:1"
+    },
+    {
+      "id": "SUSTAIN",
+      "label": "Sustain",
+      "group": "special",
+      "type": "sustain",
+      "params": {
+        "channel": 1,
+        "cc": 64,
+        "pressed": 127,
+        "released": 0
+      },
+      "signature": "cc:0:64"
+    },
+    {
+      "id": "KEYBOARD",
+      "label": "Keyboard MIDI",
+      "group": "keys",
+      "type": "keys_chromatic",
+      "params": {
+        "count": 25,
+        "start_note": 48,
+        "channel": 1,
+        "physical_range": [
+          48,
+          72
+        ],
+        "mapping_range": [
+          0,
+          127
+        ]
+      },
+      "signature": null
+    },
+    {
+      "id": "OCTAVE_UP",
+      "label": "Octave +",
+      "group": "buttons",
+      "type": "button_internal",
+      "params": {},
+      "signature": null
+    },
+    {
+      "id": "OCTAVE_DOWN",
+      "label": "Octave -",
+      "group": "buttons",
+      "type": "button_internal",
+      "params": {},
+      "signature": null
+    },
+    {
+      "id": "TRANSPOSE_UP",
+      "label": "Transpose +",
+      "group": "buttons",
+      "type": "button_internal",
+      "params": {},
+      "signature": null
+    },
+    {
+      "id": "TRANSPOSE_DOWN",
+      "label": "Transpose -",
+      "group": "buttons",
+      "type": "button_internal",
+      "params": {},
+      "signature": null
+    },
+    {
+      "id": "PAD_BANK_BTN",
+      "label": "Pad Bank",
+      "group": "buttons",
+      "type": "button_internal",
+      "params": {},
+      "signature": null
+    },
+    {
+      "id": "FULL_LEVEL",
+      "label": "Full Level",
+      "group": "buttons",
+      "type": "button_internal",
+      "params": {},
+      "signature": null
+    }
+  ]
+}

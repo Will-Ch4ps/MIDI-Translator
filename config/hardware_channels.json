@@ -1,0 +1,87 @@
+{
+  "starrykey25": {
+    "keyboard": {
+      "channel": 1,
+      "note_range": [
+        48,
+        72
+      ],
+      "mapping_range": [
+        0,
+        127
+      ],
+      "description": "Teclado físico de 25 teclas (C3-C5), com mapeamento por nota MIDI real"
+    },
+    "pads": {
+      "channel": 7,
+      "banks": {
+        "A": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "B": [
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51
+        ],
+        "C": [
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      "description": "Pads em 3 bancos (A, B, C)"
+    },
+    "knobs": {
+      "channel": 2,
+      "cc_numbers": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "description": "4 knobs absolutos"
+    },
+    "buttons": {
+      "channel": 3,
+      "cc_numbers": [
+        59,
+        60,
+        61,
+        62
+      ],
+      "mode": "toggle",
+      "description": "4 botões A, B, C, D"
+    },
+    "pitch_bend": {
+      "channel": 4,
+      "description": "Pitch bend wheel"
+    },
+    "modulation": {
+      "channel": 5,
+      "cc_number": 1,
+      "description": "Modulation wheel"
+    },
+    "sustain": {
+      "channel": 1,
+      "cc_number": 64,
+      "description": "Pedal de sustain"
+    }
+  }
+}

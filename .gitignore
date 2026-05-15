@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyc.*
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+node_modules/
+build/
+dist/
+target/
+target*/
+frontend/dist/
+src-tauri/target/
+tmp path/
+tmp run/
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500;700&display=swap");
+
+:root {
+  --bg-0: #030810;
+  --bg-1: #060e1c;
+  --bg-2: #091628;
+  --panel: #0a1828;
+  --panel-2: #0d1e34;
+  --panel-3: #142840;
+  --line: #142840;
+  --line-strong: #2a5070;
+  --text: #d0e8ff;
+  --muted: #4a7aaa;
+  --blue: #3ab4ff;
+  --cyan: #60e8ff;
+  --green: #00c878;
+  --red: #ff5050;
+  --yellow: #ffb830;
+  --shadow-lg: 0 32px 80px rgba(0, 0, 0, 0.65);
+  --shadow-md: 0 12px 36px rgba(0, 0, 0, 0.45);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 5% -8%, rgba(40, 120, 255, 0.18) 0%, transparent 38%),
+    radial-gradient(ellipse at 85% -5%, rgba(60, 200, 255, 0.12) 0%, transparent 40%),
+    linear-gradient(180deg, #020710 0%, #050c18 40%, #030810 100%);
+  color: var(--text);
+  font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+select,
+input,
+textarea {
+  font: inherit;
+}
+
+button { color: inherit; }
+
+/* ─── Scrollbar premium ─── */
+::-webkit-scrollbar { height: 5px; width: 5px; }
+::-webkit-scrollbar-track { background: #060e1a; }
+::-webkit-scrollbar-thumb { background: #1a3a58; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2a5a88; }
+
+/* ─── Utilitários ─── */
+.boot-state {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 12px;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.danger { color: var(--red); }
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
