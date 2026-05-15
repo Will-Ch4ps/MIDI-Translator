@@ -28,7 +28,7 @@ fn backend_call(command: String, payload: Value) -> Result<Value, String> {
     let payload_text = payload.to_string();
     let mut bridge = Command::new("py");
     bridge
-        .args(["-3", "backend/bridge.py", &command, &payload_text])
+        .args(["-3", "-m", "app.bridge.server", &command, &payload_text])
         .current_dir(root);
     #[cfg(windows)]
     {

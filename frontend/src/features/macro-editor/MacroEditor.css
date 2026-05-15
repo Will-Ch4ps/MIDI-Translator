@@ -1,0 +1,156 @@
+.macroeditor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.macroeditor__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.macroeditor__head h3 {
+  margin: 8px 0 2px;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.macroeditor__head p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.macroeditor__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.macroeditor__empty {
+  padding: 20px;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 12.5px;
+}
+
+.macroeditor__step {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.macroeditor__rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 14px;
+  padding-top: 18px;
+}
+
+.macroeditor__rail-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.macroeditor__rail-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(180deg, var(--border-strong), var(--border));
+  margin-top: 4px;
+}
+
+.macroeditor__card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.macroeditor__grip {
+  color: var(--text-muted);
+  background: transparent;
+  border: 0;
+  cursor: grab;
+  display: inline-flex;
+}
+
+.macroeditor__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+}
+
+.macroeditor__card-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.macroeditor__kind {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  min-width: 50px;
+}
+
+.macroeditor__card input {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  min-width: 0;
+}
+
+.macroeditor__remove {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 0;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.macroeditor__remove:hover {
+  background: rgba(255, 102, 128, 0.1);
+  color: var(--red);
+}
+
+.macroeditor__add {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.macroeditor__add > span {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-right: 4px;
+}
