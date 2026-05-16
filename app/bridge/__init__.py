@@ -1,4 +1,5 @@
-"""Bridge JSON entre Tauri e Runtime Python."""
-from .server import dispatch
+"""Bridge JSON entre Tauri e Runtime Python.
 
-__all__ = ["dispatch"]
+Importar `dispatch` direto de `app.bridge.server` (não re-exportamos
+aqui pra evitar dupla execução ao rodar `python -m app.bridge.server`).
+"""

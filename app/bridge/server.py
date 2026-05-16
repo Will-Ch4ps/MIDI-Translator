@@ -7,6 +7,13 @@ import traceback
 from pathlib import Path
 from typing import Any, Callable
 
+# Windows console default cp1252 quebra com caracteres tipo '→'.
+# Forçamos UTF-8 antes de qualquer print pra bridge ser robusta.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 from app.runtime import Runtime
 from app.bridge.commands import COMMANDS
 
