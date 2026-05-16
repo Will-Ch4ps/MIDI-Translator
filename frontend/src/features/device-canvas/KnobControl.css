@@ -1,0 +1,80 @@
+.knob {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  width: 82px;
+}
+
+.knob__cap {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #3a3f5c, #14182a 70%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 6px 16px rgba(0, 0, 0, 0.4);
+  transition: box-shadow var(--t-base) var(--ease-out);
+}
+
+.knob__gauge {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.knob__dot {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 14px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+.knob__label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.knob__cc {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.knob--mapped .knob__cap {
+  box-shadow:
+    0 0 0 1px rgba(155, 131, 255, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 8px 22px rgba(124, 92, 255, 0.25);
+}
+
+.knob--mapped .knob__dot {
+  background: var(--accent-soft);
+}
+
+.knob--mapped .knob__label {
+  color: var(--text-primary);
+}
+
+.knob--selected .knob__cap {
+  box-shadow:
+    0 0 0 3px rgba(79, 209, 224, 0.25),
+    0 8px 22px rgba(0, 0, 0, 0.5);
+}
+
+.knob--selected .knob__label {
+  color: var(--cyan);
+}

@@ -2,18 +2,33 @@
   position: relative;
   flex: 1;
   border-radius: var(--radius-lg);
-  background: linear-gradient(140deg, var(--surface), var(--bg));
+  background:
+    radial-gradient(circle at 20% 0%, rgba(124, 92, 255, 0.06), transparent 50%),
+    linear-gradient(140deg, var(--surface), var(--bg));
   border: 1px solid var(--border);
   overflow: hidden;
-  min-height: 360px;
+  min-height: 420px;
 }
 
 .canvas--empty {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   color: var(--text-muted);
-  font-size: 13px;
+  padding: 32px;
+}
+
+.canvas--empty h3 {
+  margin: 0 0 6px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.canvas--empty p {
+  margin: 0;
+  font-size: 12.5px;
+  max-width: 320px;
 }
 
 .canvas__grid {
@@ -31,92 +46,76 @@
   z-index: 1;
 }
 
-.canvas__ctrl {
+.canvas__section {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 8px 10px;
-  background: linear-gradient(180deg, var(--raised), var(--elevated));
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  color: var(--text-secondary);
-  cursor: pointer;
-  text-align: left;
-  transition: border-color var(--t-fast) var(--ease-out),
-    color var(--t-fast) var(--ease-out),
-    box-shadow var(--t-base) var(--ease-out);
+  gap: 10px;
 }
 
-.canvas__ctrl-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-muted);
-}
-
-.canvas__ctrl-label {
-  font-family: var(--font-mono);
+.canvas__section-title {
+  margin: 0;
   font-size: 10.5px;
-  color: var(--text-secondary);
-  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
-.canvas__ctrl-dot {
+.canvas__special-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.canvas__pad-banks {
+  display: flex;
+  gap: 24px;
+}
+
+.canvas__pad-bank {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.canvas__pad-bank-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-soft);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.canvas__pad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 84px);
+  gap: 8px;
+}
+
+.canvas__knob-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.canvas__btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.canvas__hint {
   position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 8px var(--accent-glow);
-}
-
-.canvas__ctrl--pad {
-  background: linear-gradient(180deg, #2b1e58, #1b1430);
-  border-color: rgba(124, 92, 255, 0.25);
-}
-
-.canvas__ctrl--knob_abs,
-.canvas__ctrl--knob_rel {
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #2c324a, #14182a 70%);
-  border-color: rgba(255, 255, 255, 0.06);
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-
-.canvas__ctrl--knob_abs .canvas__ctrl-label,
-.canvas__ctrl--knob_rel .canvas__ctrl-label {
-  display: none;
-}
-
-.canvas__ctrl--button_toggle,
-.canvas__ctrl--button_momentary,
-.canvas__ctrl--button_trigger {
-  border-radius: var(--radius-pill);
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 6px 12px;
-}
-
-.canvas__ctrl--mapped {
-  border-color: var(--accent);
-  color: var(--text-primary);
-}
-
-.canvas__ctrl--selected {
-  border-color: var(--cyan);
-  box-shadow: 0 0 0 3px rgba(79, 209, 224, 0.18), 0 12px 32px rgba(0, 0, 0, 0.5);
-  color: var(--text-primary);
-}
-
-.canvas__ctrl:hover:not(.canvas__ctrl--selected) {
-  border-color: var(--border-strong);
-  color: var(--text-primary);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-pill);
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  z-index: 2;
 }

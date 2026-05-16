@@ -1,512 +1,2962 @@
 {
+  "id": "starrykey25",
   "name": "StarryKey 25",
   "author": "Donner",
+  "description": "",
   "controls": [
     {
       "id": "PAD_A1",
-      "label": "Pad A1",
+      "name": "Pad A1",
+      "kind": "pad",
+      "signature": "note:6:36",
+      "position": {
+        "x": 4.0,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "A",
         "position": 0,
         "note": 36,
         "channel": 7
-      },
-      "signature": "note:6:36"
+      }
     },
     {
       "id": "PAD_A2",
-      "label": "Pad A2",
+      "name": "Pad A2",
+      "kind": "pad",
+      "signature": "note:6:37",
+      "position": {
+        "x": 5.05,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "A",
         "position": 1,
         "note": 37,
         "channel": 7
-      },
-      "signature": "note:6:37"
+      }
     },
     {
       "id": "PAD_A3",
-      "label": "Pad A3",
+      "name": "Pad A3",
+      "kind": "pad",
+      "signature": "note:6:38",
+      "position": {
+        "x": 6.1,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "A",
         "position": 2,
         "note": 38,
         "channel": 7
-      },
-      "signature": "note:6:38"
+      }
     },
     {
       "id": "PAD_A4",
-      "label": "Pad A4",
+      "name": "Pad A4",
+      "kind": "pad",
+      "signature": "note:6:39",
+      "position": {
+        "x": 7.15,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "A",
         "position": 3,
         "note": 39,
         "channel": 7
-      },
-      "signature": "note:6:39"
+      }
     },
     {
       "id": "PAD_A5",
-      "label": "Pad A5",
+      "name": "Pad A5",
+      "kind": "pad",
+      "signature": "note:6:40",
+      "position": {
+        "x": 4.0,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "A",
         "position": 4,
         "note": 40,
         "channel": 7
-      },
-      "signature": "note:6:40"
+      }
     },
     {
       "id": "PAD_A6",
-      "label": "Pad A6",
+      "name": "Pad A6",
+      "kind": "pad",
+      "signature": "note:6:41",
+      "position": {
+        "x": 5.05,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "A",
         "position": 5,
         "note": 41,
         "channel": 7
-      },
-      "signature": "note:6:41"
+      }
     },
     {
       "id": "PAD_A7",
-      "label": "Pad A7",
+      "name": "Pad A7",
+      "kind": "pad",
+      "signature": "note:6:42",
+      "position": {
+        "x": 6.1,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "A",
         "position": 6,
         "note": 42,
         "channel": 7
-      },
-      "signature": "note:6:42"
+      }
     },
     {
       "id": "PAD_A8",
-      "label": "Pad A8",
+      "name": "Pad A8",
+      "kind": "pad",
+      "signature": "note:6:43",
+      "position": {
+        "x": 7.15,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "A",
         "position": 7,
         "note": 43,
         "channel": 7
-      },
-      "signature": "note:6:43"
+      }
     },
     {
       "id": "PAD_B1",
-      "label": "Pad B1",
+      "name": "Pad B1",
+      "kind": "pad",
+      "signature": "note:6:44",
+      "position": {
+        "x": 9.0,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "B",
         "position": 0,
         "note": 44,
         "channel": 7
-      },
-      "signature": "note:6:44"
+      }
     },
     {
       "id": "PAD_B2",
-      "label": "Pad B2",
+      "name": "Pad B2",
+      "kind": "pad",
+      "signature": "note:6:45",
+      "position": {
+        "x": 10.05,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "B",
         "position": 1,
         "note": 45,
         "channel": 7
-      },
-      "signature": "note:6:45"
+      }
     },
     {
       "id": "PAD_B3",
-      "label": "Pad B3",
+      "name": "Pad B3",
+      "kind": "pad",
+      "signature": "note:6:46",
+      "position": {
+        "x": 11.1,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "B",
         "position": 2,
         "note": 46,
         "channel": 7
-      },
-      "signature": "note:6:46"
+      }
     },
     {
       "id": "PAD_B4",
-      "label": "Pad B4",
+      "name": "Pad B4",
+      "kind": "pad",
+      "signature": "note:6:47",
+      "position": {
+        "x": 12.15,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "B",
         "position": 3,
         "note": 47,
         "channel": 7
-      },
-      "signature": "note:6:47"
+      }
     },
     {
       "id": "PAD_B5",
-      "label": "Pad B5",
+      "name": "Pad B5",
+      "kind": "pad",
+      "signature": "note:6:48",
+      "position": {
+        "x": 9.0,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "B",
         "position": 4,
         "note": 48,
         "channel": 7
-      },
-      "signature": "note:6:48"
+      }
     },
     {
       "id": "PAD_B6",
-      "label": "Pad B6",
+      "name": "Pad B6",
+      "kind": "pad",
+      "signature": "note:6:49",
+      "position": {
+        "x": 10.05,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "B",
         "position": 5,
         "note": 49,
         "channel": 7
-      },
-      "signature": "note:6:49"
+      }
     },
     {
       "id": "PAD_B7",
-      "label": "Pad B7",
+      "name": "Pad B7",
+      "kind": "pad",
+      "signature": "note:6:50",
+      "position": {
+        "x": 11.1,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "B",
         "position": 6,
         "note": 50,
         "channel": 7
-      },
-      "signature": "note:6:50"
+      }
     },
     {
       "id": "PAD_B8",
-      "label": "Pad B8",
+      "name": "Pad B8",
+      "kind": "pad",
+      "signature": "note:6:51",
+      "position": {
+        "x": 12.15,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "B",
         "position": 7,
         "note": 51,
         "channel": 7
-      },
-      "signature": "note:6:51"
+      }
     },
     {
       "id": "PAD_C1",
-      "label": "Pad C1",
+      "name": "Pad C1",
+      "kind": "pad",
+      "signature": "note:6:52",
+      "position": {
+        "x": 14.0,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "C",
         "position": 0,
         "note": 52,
         "channel": 7
-      },
-      "signature": "note:6:52"
+      }
     },
     {
       "id": "PAD_C2",
-      "label": "Pad C2",
+      "name": "Pad C2",
+      "kind": "pad",
+      "signature": "note:6:53",
+      "position": {
+        "x": 15.05,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "C",
         "position": 1,
         "note": 53,
         "channel": 7
-      },
-      "signature": "note:6:53"
+      }
     },
     {
       "id": "PAD_C3",
-      "label": "Pad C3",
+      "name": "Pad C3",
+      "kind": "pad",
+      "signature": "note:6:54",
+      "position": {
+        "x": 16.1,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "C",
         "position": 2,
         "note": 54,
         "channel": 7
-      },
-      "signature": "note:6:54"
+      }
     },
     {
       "id": "PAD_C4",
-      "label": "Pad C4",
+      "name": "Pad C4",
+      "kind": "pad",
+      "signature": "note:6:55",
+      "position": {
+        "x": 17.15,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "C",
         "position": 3,
         "note": 55,
         "channel": 7
-      },
-      "signature": "note:6:55"
+      }
     },
     {
       "id": "PAD_C5",
-      "label": "Pad C5",
+      "name": "Pad C5",
+      "kind": "pad",
+      "signature": "note:6:56",
+      "position": {
+        "x": 14.0,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "C",
         "position": 4,
         "note": 56,
         "channel": 7
-      },
-      "signature": "note:6:56"
+      }
     },
     {
       "id": "PAD_C6",
-      "label": "Pad C6",
+      "name": "Pad C6",
+      "kind": "pad",
+      "signature": "note:6:57",
+      "position": {
+        "x": 15.05,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "C",
         "position": 5,
         "note": 57,
         "channel": 7
-      },
-      "signature": "note:6:57"
+      }
     },
     {
       "id": "PAD_C7",
-      "label": "Pad C7",
+      "name": "Pad C7",
+      "kind": "pad",
+      "signature": "note:6:58",
+      "position": {
+        "x": 16.1,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "C",
         "position": 6,
         "note": 58,
         "channel": 7
-      },
-      "signature": "note:6:58"
+      }
     },
     {
       "id": "PAD_C8",
-      "label": "Pad C8",
+      "name": "Pad C8",
+      "kind": "pad",
+      "signature": "note:6:59",
+      "position": {
+        "x": 17.15,
+        "y": 1.05,
+        "w": 1.0,
+        "h": 1.0
+      },
       "group": "pads",
-      "type": "pad_bank",
       "params": {
         "bank": "C",
         "position": 7,
         "note": 59,
         "channel": 7
-      },
-      "signature": "note:6:59"
+      }
     },
     {
       "id": "KNOB_1",
-      "label": "KNOB 1",
+      "name": "KNOB 1",
+      "kind": "knob_abs",
+      "signature": "cc:1:20",
+      "position": {
+        "x": 20.0,
+        "y": 0,
+        "w": 1.2,
+        "h": 1.2
+      },
       "group": "knobs",
-      "type": "knob_absolute",
       "params": {
         "cc": 20,
         "channel": 2
-      },
-      "signature": "cc:1:20"
+      }
     },
     {
       "id": "KNOB_2",
-      "label": "KNOB 2",
+      "name": "KNOB 2",
+      "kind": "knob_abs",
+      "signature": "cc:1:21",
+      "position": {
+        "x": 21.35,
+        "y": 0,
+        "w": 1.2,
+        "h": 1.2
+      },
       "group": "knobs",
-      "type": "knob_absolute",
       "params": {
         "cc": 21,
         "channel": 2
-      },
-      "signature": "cc:1:21"
+      }
     },
     {
       "id": "KNOB_3",
-      "label": "KNOB 3",
+      "name": "KNOB 3",
+      "kind": "knob_abs",
+      "signature": "cc:1:22",
+      "position": {
+        "x": 22.7,
+        "y": 0,
+        "w": 1.2,
+        "h": 1.2
+      },
       "group": "knobs",
-      "type": "knob_absolute",
       "params": {
         "cc": 22,
         "channel": 2
-      },
-      "signature": "cc:1:22"
+      }
     },
     {
       "id": "KNOB_4",
-      "label": "KNOB 4",
+      "name": "KNOB 4",
+      "kind": "knob_abs",
+      "signature": "cc:1:23",
+      "position": {
+        "x": 24.05,
+        "y": 0,
+        "w": 1.2,
+        "h": 1.2
+      },
       "group": "knobs",
-      "type": "knob_absolute",
       "params": {
         "cc": 23,
         "channel": 2
-      },
-      "signature": "cc:1:23"
+      }
     },
     {
       "id": "BTN_A",
-      "label": "Button A",
+      "name": "Button A",
+      "kind": "button_toggle",
+      "signature": "cc:2:59",
+      "position": {
+        "x": 20.0,
+        "y": 5.0,
+        "w": 1.0,
+        "h": 0.8
+      },
       "group": "buttons",
-      "type": "button_toggle",
       "params": {
         "cc": 59,
         "channel": 3,
         "mode": "toggle"
-      },
-      "signature": "cc:2:59"
+      }
     },
     {
       "id": "BTN_B",
-      "label": "Button B",
+      "name": "Button B",
+      "kind": "button_toggle",
+      "signature": "cc:2:60",
+      "position": {
+        "x": 20.0,
+        "y": 5.0,
+        "w": 1.0,
+        "h": 0.8
+      },
       "group": "buttons",
-      "type": "button_toggle",
       "params": {
         "cc": 60,
         "channel": 3,
         "mode": "toggle"
-      },
-      "signature": "cc:2:60"
+      }
     },
     {
       "id": "BTN_C",
-      "label": "Button C",
+      "name": "Button C",
+      "kind": "button_toggle",
+      "signature": "cc:2:61",
+      "position": {
+        "x": 20.0,
+        "y": 5.0,
+        "w": 1.0,
+        "h": 0.8
+      },
       "group": "buttons",
-      "type": "button_toggle",
       "params": {
         "cc": 61,
         "channel": 3,
         "mode": "toggle"
-      },
-      "signature": "cc:2:61"
+      }
     },
     {
       "id": "BTN_D",
-      "label": "Button D",
+      "name": "Button D",
+      "kind": "button_toggle",
+      "signature": "cc:2:62",
+      "position": {
+        "x": 20.0,
+        "y": 5.0,
+        "w": 1.0,
+        "h": 0.8
+      },
       "group": "buttons",
-      "type": "button_toggle",
       "params": {
         "cc": 62,
         "channel": 3,
         "mode": "toggle"
-      },
-      "signature": "cc:2:62"
+      }
     },
     {
       "id": "PITCH",
-      "label": "Pitch Bend",
+      "name": "Pitch Bend",
+      "kind": "pitch",
+      "signature": "pitch:3:0",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "w": 1.2,
+        "h": 2.4
+      },
       "group": "special",
-      "type": "pitch_bend",
       "params": {
         "channel": 4
-      },
-      "signature": "pitch:3:0"
+      }
     },
     {
       "id": "MOD",
-      "label": "MOD",
+      "name": "MOD",
+      "kind": "knob_abs",
+      "signature": "cc:4:1",
+      "position": {
+        "x": 20.0,
+        "y": 0,
+        "w": 1.2,
+        "h": 1.2
+      },
       "group": "knobs",
-      "type": "knob_absolute",
       "params": {
         "cc": 1,
         "channel": 5
-      },
-      "signature": "cc:4:1"
+      }
     },
     {
       "id": "SUSTAIN",
-      "label": "Sustain",
+      "name": "Sustain",
+      "kind": "sustain",
+      "signature": "cc:0:64",
+      "position": {
+        "x": 1.5,
+        "y": 0,
+        "w": 1.2,
+        "h": 2.4
+      },
       "group": "special",
-      "type": "sustain",
       "params": {
         "channel": 1,
         "cc": 64,
         "pressed": 127,
         "released": 0
-      },
-      "signature": "cc:0:64"
+      }
     },
     {
-      "id": "KEYBOARD",
-      "label": "Keyboard MIDI",
+      "id": "KEY_NOTE_0",
+      "name": "C-1",
+      "kind": "key",
+      "signature": "note:0:0",
+      "position": {
+        "x": 0.0,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
       "group": "keys",
-      "type": "keys_chromatic",
       "params": {
-        "count": 25,
-        "start_note": 48,
+        "note": 0,
         "channel": 1,
-        "physical_range": [
-          48,
-          72
-        ],
-        "mapping_range": [
-          0,
-          127
-        ]
+        "octave": -1
+      }
+    },
+    {
+      "id": "KEY_NOTE_1",
+      "name": "C#-1",
+      "kind": "key",
+      "signature": "note:0:1",
+      "position": {
+        "x": 0.55,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
       },
-      "signature": null
+      "group": "keys",
+      "params": {
+        "note": 1,
+        "channel": 1,
+        "octave": -1
+      }
     },
     {
-      "id": "OCTAVE_UP",
-      "label": "Octave +",
-      "group": "buttons",
-      "type": "button_internal",
-      "params": {},
-      "signature": null
+      "id": "KEY_NOTE_2",
+      "name": "D-1",
+      "kind": "key",
+      "signature": "note:0:2",
+      "position": {
+        "x": 1.1,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 2,
+        "channel": 1,
+        "octave": -1
+      }
     },
     {
-      "id": "OCTAVE_DOWN",
-      "label": "Octave -",
-      "group": "buttons",
-      "type": "button_internal",
-      "params": {},
-      "signature": null
+      "id": "KEY_NOTE_3",
+      "name": "D#-1",
+      "kind": "key",
+      "signature": "note:0:3",
+      "position": {
+        "x": 1.6500000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 3,
+        "channel": 1,
+        "octave": -1
+      }
     },
     {
-      "id": "TRANSPOSE_UP",
-      "label": "Transpose +",
-      "group": "buttons",
-      "type": "button_internal",
-      "params": {},
-      "signature": null
+      "id": "KEY_NOTE_4",
+      "name": "E-1",
+      "kind": "key",
+      "signature": "note:0:4",
+      "position": {
+        "x": 2.2,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 4,
+        "channel": 1,
+        "octave": -1
+      }
     },
     {
-      "id": "TRANSPOSE_DOWN",
-      "label": "Transpose -",
-      "group": "buttons",
-      "type": "button_internal",
-      "params": {},
-      "signature": null
+      "id": "KEY_NOTE_5",
+      "name": "F-1",
+      "kind": "key",
+      "signature": "note:0:5",
+      "position": {
+        "x": 2.75,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 5,
+        "channel": 1,
+        "octave": -1
+      }
     },
     {
-      "id": "PAD_BANK_BTN",
-      "label": "Pad Bank",
-      "group": "buttons",
-      "type": "button_internal",
-      "params": {},
-      "signature": null
+      "id": "KEY_NOTE_6",
+      "name": "F#-1",
+      "kind": "key",
+      "signature": "note:0:6",
+      "position": {
+        "x": 3.3000000000000003,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 6,
+        "channel": 1,
+        "octave": -1
+      }
     },
     {
-      "id": "FULL_LEVEL",
-      "label": "Full Level",
-      "group": "buttons",
-      "type": "button_internal",
-      "params": {},
-      "signature": null
+      "id": "KEY_NOTE_7",
+      "name": "G-1",
+      "kind": "key",
+      "signature": "note:0:7",
+      "position": {
+        "x": 3.8500000000000005,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 7,
+        "channel": 1,
+        "octave": -1
+      }
+    },
+    {
+      "id": "KEY_NOTE_8",
+      "name": "G#-1",
+      "kind": "key",
+      "signature": "note:0:8",
+      "position": {
+        "x": 4.4,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 8,
+        "channel": 1,
+        "octave": -1
+      }
+    },
+    {
+      "id": "KEY_NOTE_9",
+      "name": "A-1",
+      "kind": "key",
+      "signature": "note:0:9",
+      "position": {
+        "x": 4.95,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 9,
+        "channel": 1,
+        "octave": -1
+      }
+    },
+    {
+      "id": "KEY_NOTE_10",
+      "name": "A#-1",
+      "kind": "key",
+      "signature": "note:0:10",
+      "position": {
+        "x": 5.5,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 10,
+        "channel": 1,
+        "octave": -1
+      }
+    },
+    {
+      "id": "KEY_NOTE_11",
+      "name": "B-1",
+      "kind": "key",
+      "signature": "note:0:11",
+      "position": {
+        "x": 6.050000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 11,
+        "channel": 1,
+        "octave": -1
+      }
+    },
+    {
+      "id": "KEY_NOTE_12",
+      "name": "C0",
+      "kind": "key",
+      "signature": "note:0:12",
+      "position": {
+        "x": 6.6000000000000005,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 12,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_13",
+      "name": "C#0",
+      "kind": "key",
+      "signature": "note:0:13",
+      "position": {
+        "x": 7.15,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 13,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_14",
+      "name": "D0",
+      "kind": "key",
+      "signature": "note:0:14",
+      "position": {
+        "x": 7.700000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 14,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_15",
+      "name": "D#0",
+      "kind": "key",
+      "signature": "note:0:15",
+      "position": {
+        "x": 8.25,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 15,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_16",
+      "name": "E0",
+      "kind": "key",
+      "signature": "note:0:16",
+      "position": {
+        "x": 8.8,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 16,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_17",
+      "name": "F0",
+      "kind": "key",
+      "signature": "note:0:17",
+      "position": {
+        "x": 9.350000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 17,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_18",
+      "name": "F#0",
+      "kind": "key",
+      "signature": "note:0:18",
+      "position": {
+        "x": 9.9,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 18,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_19",
+      "name": "G0",
+      "kind": "key",
+      "signature": "note:0:19",
+      "position": {
+        "x": 10.450000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 19,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_20",
+      "name": "G#0",
+      "kind": "key",
+      "signature": "note:0:20",
+      "position": {
+        "x": 11.0,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 20,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_21",
+      "name": "A0",
+      "kind": "key",
+      "signature": "note:0:21",
+      "position": {
+        "x": 11.55,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 21,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_22",
+      "name": "A#0",
+      "kind": "key",
+      "signature": "note:0:22",
+      "position": {
+        "x": 12.100000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 22,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_23",
+      "name": "B0",
+      "kind": "key",
+      "signature": "note:0:23",
+      "position": {
+        "x": 12.65,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 23,
+        "channel": 1,
+        "octave": 0
+      }
+    },
+    {
+      "id": "KEY_NOTE_24",
+      "name": "C1",
+      "kind": "key",
+      "signature": "note:0:24",
+      "position": {
+        "x": 13.200000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 24,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_25",
+      "name": "C#1",
+      "kind": "key",
+      "signature": "note:0:25",
+      "position": {
+        "x": 13.750000000000002,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 25,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_26",
+      "name": "D1",
+      "kind": "key",
+      "signature": "note:0:26",
+      "position": {
+        "x": 14.3,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 26,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_27",
+      "name": "D#1",
+      "kind": "key",
+      "signature": "note:0:27",
+      "position": {
+        "x": 14.850000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 27,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_28",
+      "name": "E1",
+      "kind": "key",
+      "signature": "note:0:28",
+      "position": {
+        "x": 15.400000000000002,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 28,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_29",
+      "name": "F1",
+      "kind": "key",
+      "signature": "note:0:29",
+      "position": {
+        "x": 15.950000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 29,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_30",
+      "name": "F#1",
+      "kind": "key",
+      "signature": "note:0:30",
+      "position": {
+        "x": 16.5,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 30,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_31",
+      "name": "G1",
+      "kind": "key",
+      "signature": "note:0:31",
+      "position": {
+        "x": 17.05,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 31,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_32",
+      "name": "G#1",
+      "kind": "key",
+      "signature": "note:0:32",
+      "position": {
+        "x": 17.6,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 32,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_33",
+      "name": "A1",
+      "kind": "key",
+      "signature": "note:0:33",
+      "position": {
+        "x": 18.150000000000002,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 33,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_34",
+      "name": "A#1",
+      "kind": "key",
+      "signature": "note:0:34",
+      "position": {
+        "x": 18.700000000000003,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 34,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_35",
+      "name": "B1",
+      "kind": "key",
+      "signature": "note:0:35",
+      "position": {
+        "x": 19.25,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 35,
+        "channel": 1,
+        "octave": 1
+      }
+    },
+    {
+      "id": "KEY_NOTE_36",
+      "name": "C2",
+      "kind": "key",
+      "signature": "note:0:36",
+      "position": {
+        "x": 19.8,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 36,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_37",
+      "name": "C#2",
+      "kind": "key",
+      "signature": "note:0:37",
+      "position": {
+        "x": 20.35,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 37,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_38",
+      "name": "D2",
+      "kind": "key",
+      "signature": "note:0:38",
+      "position": {
+        "x": 20.900000000000002,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 38,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_39",
+      "name": "D#2",
+      "kind": "key",
+      "signature": "note:0:39",
+      "position": {
+        "x": 21.450000000000003,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 39,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_40",
+      "name": "E2",
+      "kind": "key",
+      "signature": "note:0:40",
+      "position": {
+        "x": 22.0,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 40,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_41",
+      "name": "F2",
+      "kind": "key",
+      "signature": "note:0:41",
+      "position": {
+        "x": 22.55,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 41,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_42",
+      "name": "F#2",
+      "kind": "key",
+      "signature": "note:0:42",
+      "position": {
+        "x": 23.1,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 42,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_43",
+      "name": "G2",
+      "kind": "key",
+      "signature": "note:0:43",
+      "position": {
+        "x": 23.650000000000002,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 43,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_44",
+      "name": "G#2",
+      "kind": "key",
+      "signature": "note:0:44",
+      "position": {
+        "x": 24.200000000000003,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 44,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_45",
+      "name": "A2",
+      "kind": "key",
+      "signature": "note:0:45",
+      "position": {
+        "x": 24.750000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 45,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_46",
+      "name": "A#2",
+      "kind": "key",
+      "signature": "note:0:46",
+      "position": {
+        "x": 25.3,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 46,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_47",
+      "name": "B2",
+      "kind": "key",
+      "signature": "note:0:47",
+      "position": {
+        "x": 25.85,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 47,
+        "channel": 1,
+        "octave": 2
+      }
+    },
+    {
+      "id": "KEY_NOTE_48",
+      "name": "C3",
+      "kind": "key",
+      "signature": "note:0:48",
+      "position": {
+        "x": 26.400000000000002,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 48,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_49",
+      "name": "C#3",
+      "kind": "key",
+      "signature": "note:0:49",
+      "position": {
+        "x": 26.950000000000003,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 49,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_50",
+      "name": "D3",
+      "kind": "key",
+      "signature": "note:0:50",
+      "position": {
+        "x": 27.500000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 50,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_51",
+      "name": "D#3",
+      "kind": "key",
+      "signature": "note:0:51",
+      "position": {
+        "x": 28.05,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 51,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_52",
+      "name": "E3",
+      "kind": "key",
+      "signature": "note:0:52",
+      "position": {
+        "x": 28.6,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 52,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_53",
+      "name": "F3",
+      "kind": "key",
+      "signature": "note:0:53",
+      "position": {
+        "x": 29.150000000000002,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 53,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_54",
+      "name": "F#3",
+      "kind": "key",
+      "signature": "note:0:54",
+      "position": {
+        "x": 29.700000000000003,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 54,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_55",
+      "name": "G3",
+      "kind": "key",
+      "signature": "note:0:55",
+      "position": {
+        "x": 30.250000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 55,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_56",
+      "name": "G#3",
+      "kind": "key",
+      "signature": "note:0:56",
+      "position": {
+        "x": 30.800000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 56,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_57",
+      "name": "A3",
+      "kind": "key",
+      "signature": "note:0:57",
+      "position": {
+        "x": 31.35,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 57,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_58",
+      "name": "A#3",
+      "kind": "key",
+      "signature": "note:0:58",
+      "position": {
+        "x": 31.900000000000002,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 58,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_59",
+      "name": "B3",
+      "kind": "key",
+      "signature": "note:0:59",
+      "position": {
+        "x": 32.45,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 59,
+        "channel": 1,
+        "octave": 3
+      }
+    },
+    {
+      "id": "KEY_NOTE_60",
+      "name": "C4",
+      "kind": "key",
+      "signature": "note:0:60",
+      "position": {
+        "x": 33.0,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 60,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_61",
+      "name": "C#4",
+      "kind": "key",
+      "signature": "note:0:61",
+      "position": {
+        "x": 33.550000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 61,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_62",
+      "name": "D4",
+      "kind": "key",
+      "signature": "note:0:62",
+      "position": {
+        "x": 34.1,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 62,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_63",
+      "name": "D#4",
+      "kind": "key",
+      "signature": "note:0:63",
+      "position": {
+        "x": 34.650000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 63,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_64",
+      "name": "E4",
+      "kind": "key",
+      "signature": "note:0:64",
+      "position": {
+        "x": 35.2,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 64,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_65",
+      "name": "F4",
+      "kind": "key",
+      "signature": "note:0:65",
+      "position": {
+        "x": 35.75,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 65,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_66",
+      "name": "F#4",
+      "kind": "key",
+      "signature": "note:0:66",
+      "position": {
+        "x": 36.300000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 66,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_67",
+      "name": "G4",
+      "kind": "key",
+      "signature": "note:0:67",
+      "position": {
+        "x": 36.85,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 67,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_68",
+      "name": "G#4",
+      "kind": "key",
+      "signature": "note:0:68",
+      "position": {
+        "x": 37.400000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 68,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_69",
+      "name": "A4",
+      "kind": "key",
+      "signature": "note:0:69",
+      "position": {
+        "x": 37.95,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 69,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_70",
+      "name": "A#4",
+      "kind": "key",
+      "signature": "note:0:70",
+      "position": {
+        "x": 38.5,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 70,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_71",
+      "name": "B4",
+      "kind": "key",
+      "signature": "note:0:71",
+      "position": {
+        "x": 39.050000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 71,
+        "channel": 1,
+        "octave": 4
+      }
+    },
+    {
+      "id": "KEY_NOTE_72",
+      "name": "C5",
+      "kind": "key",
+      "signature": "note:0:72",
+      "position": {
+        "x": 39.6,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 72,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_73",
+      "name": "C#5",
+      "kind": "key",
+      "signature": "note:0:73",
+      "position": {
+        "x": 40.150000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 73,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_74",
+      "name": "D5",
+      "kind": "key",
+      "signature": "note:0:74",
+      "position": {
+        "x": 40.7,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 74,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_75",
+      "name": "D#5",
+      "kind": "key",
+      "signature": "note:0:75",
+      "position": {
+        "x": 41.25,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 75,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_76",
+      "name": "E5",
+      "kind": "key",
+      "signature": "note:0:76",
+      "position": {
+        "x": 41.800000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 76,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_77",
+      "name": "F5",
+      "kind": "key",
+      "signature": "note:0:77",
+      "position": {
+        "x": 42.35,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 77,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_78",
+      "name": "F#5",
+      "kind": "key",
+      "signature": "note:0:78",
+      "position": {
+        "x": 42.900000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 78,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_79",
+      "name": "G5",
+      "kind": "key",
+      "signature": "note:0:79",
+      "position": {
+        "x": 43.45,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 79,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_80",
+      "name": "G#5",
+      "kind": "key",
+      "signature": "note:0:80",
+      "position": {
+        "x": 44.0,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 80,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_81",
+      "name": "A5",
+      "kind": "key",
+      "signature": "note:0:81",
+      "position": {
+        "x": 44.550000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 81,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_82",
+      "name": "A#5",
+      "kind": "key",
+      "signature": "note:0:82",
+      "position": {
+        "x": 45.1,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 82,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_83",
+      "name": "B5",
+      "kind": "key",
+      "signature": "note:0:83",
+      "position": {
+        "x": 45.650000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 83,
+        "channel": 1,
+        "octave": 5
+      }
+    },
+    {
+      "id": "KEY_NOTE_84",
+      "name": "C6",
+      "kind": "key",
+      "signature": "note:0:84",
+      "position": {
+        "x": 46.2,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 84,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_85",
+      "name": "C#6",
+      "kind": "key",
+      "signature": "note:0:85",
+      "position": {
+        "x": 46.75000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 85,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_86",
+      "name": "D6",
+      "kind": "key",
+      "signature": "note:0:86",
+      "position": {
+        "x": 47.300000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 86,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_87",
+      "name": "D#6",
+      "kind": "key",
+      "signature": "note:0:87",
+      "position": {
+        "x": 47.85,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 87,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_88",
+      "name": "E6",
+      "kind": "key",
+      "signature": "note:0:88",
+      "position": {
+        "x": 48.400000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 88,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_89",
+      "name": "F6",
+      "kind": "key",
+      "signature": "note:0:89",
+      "position": {
+        "x": 48.95,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 89,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_90",
+      "name": "F#6",
+      "kind": "key",
+      "signature": "note:0:90",
+      "position": {
+        "x": 49.50000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 90,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_91",
+      "name": "G6",
+      "kind": "key",
+      "signature": "note:0:91",
+      "position": {
+        "x": 50.050000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 91,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_92",
+      "name": "G#6",
+      "kind": "key",
+      "signature": "note:0:92",
+      "position": {
+        "x": 50.6,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 92,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_93",
+      "name": "A6",
+      "kind": "key",
+      "signature": "note:0:93",
+      "position": {
+        "x": 51.150000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 93,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_94",
+      "name": "A#6",
+      "kind": "key",
+      "signature": "note:0:94",
+      "position": {
+        "x": 51.7,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 94,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_95",
+      "name": "B6",
+      "kind": "key",
+      "signature": "note:0:95",
+      "position": {
+        "x": 52.25000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 95,
+        "channel": 1,
+        "octave": 6
+      }
+    },
+    {
+      "id": "KEY_NOTE_96",
+      "name": "C7",
+      "kind": "key",
+      "signature": "note:0:96",
+      "position": {
+        "x": 52.800000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 96,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_97",
+      "name": "C#7",
+      "kind": "key",
+      "signature": "note:0:97",
+      "position": {
+        "x": 53.35,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 97,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_98",
+      "name": "D7",
+      "kind": "key",
+      "signature": "note:0:98",
+      "position": {
+        "x": 53.900000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 98,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_99",
+      "name": "D#7",
+      "kind": "key",
+      "signature": "note:0:99",
+      "position": {
+        "x": 54.45,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 99,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_100",
+      "name": "E7",
+      "kind": "key",
+      "signature": "note:0:100",
+      "position": {
+        "x": 55.00000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 100,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_101",
+      "name": "F7",
+      "kind": "key",
+      "signature": "note:0:101",
+      "position": {
+        "x": 55.550000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 101,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_102",
+      "name": "F#7",
+      "kind": "key",
+      "signature": "note:0:102",
+      "position": {
+        "x": 56.1,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 102,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_103",
+      "name": "G7",
+      "kind": "key",
+      "signature": "note:0:103",
+      "position": {
+        "x": 56.650000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 103,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_104",
+      "name": "G#7",
+      "kind": "key",
+      "signature": "note:0:104",
+      "position": {
+        "x": 57.2,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 104,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_105",
+      "name": "A7",
+      "kind": "key",
+      "signature": "note:0:105",
+      "position": {
+        "x": 57.75000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 105,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_106",
+      "name": "A#7",
+      "kind": "key",
+      "signature": "note:0:106",
+      "position": {
+        "x": 58.300000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 106,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_107",
+      "name": "B7",
+      "kind": "key",
+      "signature": "note:0:107",
+      "position": {
+        "x": 58.85,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 107,
+        "channel": 1,
+        "octave": 7
+      }
+    },
+    {
+      "id": "KEY_NOTE_108",
+      "name": "C8",
+      "kind": "key",
+      "signature": "note:0:108",
+      "position": {
+        "x": 59.400000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 108,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_109",
+      "name": "C#8",
+      "kind": "key",
+      "signature": "note:0:109",
+      "position": {
+        "x": 59.95,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 109,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_110",
+      "name": "D8",
+      "kind": "key",
+      "signature": "note:0:110",
+      "position": {
+        "x": 60.50000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 110,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_111",
+      "name": "D#8",
+      "kind": "key",
+      "signature": "note:0:111",
+      "position": {
+        "x": 61.050000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 111,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_112",
+      "name": "E8",
+      "kind": "key",
+      "signature": "note:0:112",
+      "position": {
+        "x": 61.60000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 112,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_113",
+      "name": "F8",
+      "kind": "key",
+      "signature": "note:0:113",
+      "position": {
+        "x": 62.150000000000006,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 113,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_114",
+      "name": "F#8",
+      "kind": "key",
+      "signature": "note:0:114",
+      "position": {
+        "x": 62.7,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 114,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_115",
+      "name": "G8",
+      "kind": "key",
+      "signature": "note:0:115",
+      "position": {
+        "x": 63.25000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 115,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_116",
+      "name": "G#8",
+      "kind": "key",
+      "signature": "note:0:116",
+      "position": {
+        "x": 63.800000000000004,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 116,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_117",
+      "name": "A8",
+      "kind": "key",
+      "signature": "note:0:117",
+      "position": {
+        "x": 64.35000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 117,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_118",
+      "name": "A#8",
+      "kind": "key",
+      "signature": "note:0:118",
+      "position": {
+        "x": 64.9,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 118,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_119",
+      "name": "B8",
+      "kind": "key",
+      "signature": "note:0:119",
+      "position": {
+        "x": 65.45,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 119,
+        "channel": 1,
+        "octave": 8
+      }
+    },
+    {
+      "id": "KEY_NOTE_120",
+      "name": "C9",
+      "kind": "key",
+      "signature": "note:0:120",
+      "position": {
+        "x": 66.0,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 120,
+        "channel": 1,
+        "octave": 9
+      }
+    },
+    {
+      "id": "KEY_NOTE_121",
+      "name": "C#9",
+      "kind": "key",
+      "signature": "note:0:121",
+      "position": {
+        "x": 66.55000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 121,
+        "channel": 1,
+        "octave": 9
+      }
+    },
+    {
+      "id": "KEY_NOTE_122",
+      "name": "D9",
+      "kind": "key",
+      "signature": "note:0:122",
+      "position": {
+        "x": 67.10000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 122,
+        "channel": 1,
+        "octave": 9
+      }
+    },
+    {
+      "id": "KEY_NOTE_123",
+      "name": "D#9",
+      "kind": "key",
+      "signature": "note:0:123",
+      "position": {
+        "x": 67.65,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 123,
+        "channel": 1,
+        "octave": 9
+      }
+    },
+    {
+      "id": "KEY_NOTE_124",
+      "name": "E9",
+      "kind": "key",
+      "signature": "note:0:124",
+      "position": {
+        "x": 68.2,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 124,
+        "channel": 1,
+        "octave": 9
+      }
+    },
+    {
+      "id": "KEY_NOTE_125",
+      "name": "F9",
+      "kind": "key",
+      "signature": "note:0:125",
+      "position": {
+        "x": 68.75,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 125,
+        "channel": 1,
+        "octave": 9
+      }
+    },
+    {
+      "id": "KEY_NOTE_126",
+      "name": "F#9",
+      "kind": "key",
+      "signature": "note:0:126",
+      "position": {
+        "x": 69.30000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 126,
+        "channel": 1,
+        "octave": 9
+      }
+    },
+    {
+      "id": "KEY_NOTE_127",
+      "name": "G9",
+      "kind": "key",
+      "signature": "note:0:127",
+      "position": {
+        "x": 69.85000000000001,
+        "y": 8.0,
+        "w": 0.5,
+        "h": 2.4
+      },
+      "group": "keys",
+      "params": {
+        "note": 127,
+        "channel": 1,
+        "octave": 9
+      }
     }
-  ]
+  ],
+  "state_machine": {},
+  "_format": "midi-studio.device.v2"
 }

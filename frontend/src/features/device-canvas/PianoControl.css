@@ -1,0 +1,125 @@
+.piano {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.piano__range {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.piano__board {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.piano__whites {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 1px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1px;
+}
+
+.piano__blacks {
+  position: absolute;
+  inset: 0;
+  height: 60%;
+  pointer-events: none;
+}
+
+.piano__black-wrap {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.piano__key {
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  transition: background var(--t-fast) var(--ease-out),
+    box-shadow var(--t-base) var(--ease-out);
+  padding: 0;
+}
+
+.piano__key--white {
+  background: linear-gradient(180deg, #f3f4fa 0%, #c9cbd8 100%);
+  border-radius: 0 0 4px 4px;
+  height: 100%;
+}
+
+.piano__key--white:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #d8d9e3 100%);
+}
+
+.piano__key--black {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #1c1f2e 0%, #050610 100%);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.6);
+}
+
+.piano__key--black:hover {
+  background: linear-gradient(180deg, #2a2f44 0%, #0c0e17 100%);
+}
+
+.piano__key--mapped.piano__key--white {
+  background: linear-gradient(180deg, #d6cdff 0%, #a89dff 100%);
+}
+
+.piano__key--mapped.piano__key--black {
+  background: linear-gradient(180deg, #5841c2 0%, #2a1a78 100%);
+}
+
+.piano__key--selected.piano__key--white {
+  background: linear-gradient(180deg, #b8eef4 0%, #4fd1e0 100%);
+  box-shadow: 0 0 0 2px var(--cyan) inset;
+}
+
+.piano__key--selected.piano__key--black {
+  background: linear-gradient(180deg, #2cb1c2 0%, #166373 100%);
+  box-shadow: 0 0 0 2px var(--cyan) inset;
+}
+
+.piano__key-dot {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateX(-50%);
+  box-shadow: 0 0 6px var(--accent-glow);
+}
+
+.piano__key--black .piano__key-dot {
+  background: var(--accent-soft);
+  bottom: 6px;
+}
+
+.piano__key-label {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.04em;
+}
+
+.piano__key--mapped .piano__key-label {
+  color: rgba(20, 0, 50, 0.7);
+}

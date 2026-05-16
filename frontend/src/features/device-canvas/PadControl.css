@@ -1,0 +1,84 @@
+.pad {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  background: linear-gradient(160deg, #2a1f5e 0%, #1a1230 75%);
+  border: 1px solid rgba(124, 92, 255, 0.25);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.3) inset,
+    0 6px 16px rgba(0, 0, 0, 0.35);
+  transition: border-color var(--t-fast) var(--ease-out),
+    transform var(--t-base) var(--ease-out);
+}
+
+.pad__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.pad__id {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-soft);
+  letter-spacing: 0.05em;
+}
+
+.pad__note {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+.pad__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px rgba(62, 230, 168, 0.7);
+}
+
+.pad__glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 30% 0%,
+    rgba(155, 131, 255, 0.18),
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.pad--mapped {
+  border-color: rgba(155, 131, 255, 0.55);
+  color: var(--text-primary);
+}
+
+.pad--mapped .pad__glow {
+  background: radial-gradient(
+    circle at 30% 0%,
+    rgba(155, 131, 255, 0.4),
+    transparent 70%
+  );
+}
+
+.pad--selected {
+  border-color: var(--cyan);
+  box-shadow:
+    0 0 0 3px rgba(79, 209, 224, 0.2),
+    0 12px 30px rgba(0, 0, 0, 0.5),
+    0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  color: var(--text-primary);
+}

@@ -8,6 +8,14 @@ from .preset_packs import handle_apply_preset_pack, handle_undo_preset_pack, han
 from .actions import handle_test_action, handle_list_actions
 from .recipes import handle_list_recipes
 from .telemetry import handle_telemetry_snapshot, handle_log_snapshot
+from .learn import (
+    handle_learn_start,
+    handle_learn_stop,
+    handle_learn_snapshot,
+    handle_learn_advance,
+    handle_learn_override,
+    handle_learn_finalize,
+)
 
 
 COMMANDS = {
@@ -29,6 +37,12 @@ COMMANDS = {
     "list_recipes": handle_list_recipes,
     "telemetry_snapshot": handle_telemetry_snapshot,
     "log_snapshot": handle_log_snapshot,
+    "learn_start": handle_learn_start,
+    "learn_stop": handle_learn_stop,
+    "learn_snapshot": handle_learn_snapshot,
+    "learn_advance": handle_learn_advance,
+    "learn_override": handle_learn_override,
+    "learn_finalize": handle_learn_finalize,
 }
 
 

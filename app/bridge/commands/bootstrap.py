@@ -5,9 +5,11 @@ from typing import Any
 
 from app.runtime import Runtime
 from app.bridge.preset_packs_builtin import list_builtin_preset_packs
+from core.device.migrate import autodiscover_legacy, migrate_legacy_device
 
 
 def handle_bootstrap(runtime: Runtime, _payload: dict[str, Any]) -> dict[str, Any]:
+    _import_legacy_devices(runtime)
     devices = [device for device in (runtime.devices.load(name) for name in runtime.devices.list_devices()) if device]
     active_device = devices[0] if devices and runtime.active_device is None else runtime.active_device
     if active_device and runtime.active_device is None:
@@ -39,6 +41,13 @@ def handle_bootstrap(runtime: Runtime, _payload: dict[str, Any]) -> dict[str, An
         "midi_output_ports": runtime.midi_output_ports(),
         "active_layer": runtime.router.layer_state.current,
     }
+
+
+def _import_legacy_devices(runtime: Runtime) -> None:
+    for device_id, data in autodiscover_legacy(runtime.devices.root):
+        device = migrate_legacy_device(data, device_id)
+        if device.controls:
+            runtime.devices.save(device)
 
 
 def _connector_summaries(runtime: Runtime) -> list[dict[str, Any]]:

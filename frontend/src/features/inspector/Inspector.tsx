@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Trash2, Tag, Layers, MousePointer, Clock, Zap, Code2 } from 'lucide-react';
+import { Plus, Trash2, Tag, Layers, MousePointer, Clock, Zap, Code2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { Badge, Button, Tabs, TabPanel, type Tab, Card } from '../../design';
 import { useApp, useSelectedControl } from '../../state/store';
+import { backend } from '../../lib/backend';
 import type { Mapping, TriggerMode } from '../../types/models';
 import { ActionBrowser } from '../action-browser/ActionBrowser';
 import { TriggerSelector } from './TriggerSelector';
@@ -37,11 +38,22 @@ export function Inspector() {
   if (!control) {
     return (
       <aside className="inspector inspector--empty">
-        <div>
-          <MousePointer size={20} />
-          <h3>Nenhum controle selecionado</h3>
-          <p>Clique num pad, knob ou tecla no canvas pra editar o atalho.</p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.18 }}
+        >
+          <span className="inspector__empty-icon">
+            <MousePointer size={22} />
+          </span>
+          <h3>Selecione um controle</h3>
+          <p>Clique num <strong>pad</strong>, <strong>knob</strong>, <strong>tecla</strong> ou <strong>botão</strong> no canvas pra criar ou editar o atalho.</p>
+          <ul className="inspector__empty-tips">
+            <li><strong>Verde</strong> no canto = já tem atalho</li>
+            <li><strong>Borda ciano</strong> = controle selecionado</li>
+            <li>Use os 4 disparos (press / hold / double / release) pra <strong>multiplicar</strong> ações por controle</li>
+          </ul>
+        </motion.div>
       </aside>
     );
   }
@@ -118,7 +130,7 @@ export function Inspector() {
 
             <footer className="inspector__footer">
               <Button variant="ghost" icon={<Trash2 size={14} />}>Remover atalho</Button>
-              <Button variant="primary" icon={<Zap size={14} />}>Testar agora</Button>
+              <TestFireButton mapping={mapping} />
             </footer>
           </>
         ) : (
@@ -138,6 +150,31 @@ export function Inspector() {
 
       <ActionBrowser open={browserOpen} onClose={() => setBrowserOpen(false)} />
     </>
+  );
+}
+
+function TestFireButton({ mapping }: { mapping: Mapping }) {
+  const [state, setState] = useState<'idle' | 'firing' | 'ok' | 'error'>('idle');
+  const fire = async () => {
+    setState('firing');
+    try {
+      const result = await backend.testAction(mapping.action.id, mapping.action.params);
+      setState(result.ran ? 'ok' : 'error');
+    } catch {
+      setState('error');
+    } finally {
+      window.setTimeout(() => setState('idle'), 1400);
+    }
+  };
+  return (
+    <Button
+      variant="primary"
+      icon={state === 'ok' ? <CheckCircle2 size={14} /> : state === 'error' ? <AlertCircle size={14} /> : <Zap size={14} />}
+      onClick={() => void fire()}
+      loading={state === 'firing'}
+    >
+      {state === 'ok' ? 'Disparou!' : state === 'error' ? 'Falhou' : 'Testar agora'}
+    </Button>
   );
 }
 
