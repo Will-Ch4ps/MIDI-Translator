@@ -93,4 +93,6 @@ export const mockBootstrap: Bootstrap = {
   ],
   midi_input_ports: ['STARRYKEY 25 0'],
   midi_output_ports: ['Microsoft GS Wavetable Synth 0', 'STARRYKEY 25 1'],
+  available_action_ids: ['core.noop', 'audio.volume.set', 'audio.volume.mute_toggle'],
+  active_layer: 'default',
 };

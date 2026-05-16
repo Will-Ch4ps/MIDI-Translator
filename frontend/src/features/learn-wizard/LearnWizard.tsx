@@ -13,7 +13,7 @@ import {
   Plug,
 } from 'lucide-react';
 import { Dialog, Button, Input, Field, Badge } from '../../design';
-import { backend, isTauri } from '../../lib/backend';
+import { backend, invokeBackend, isTauri } from '../../lib/backend';
 import { useApp } from '../../state/store';
 import './LearnWizard.css';
 
@@ -65,10 +65,10 @@ export function LearnWizard({ open, onClose }: { open: boolean; onClose: () => v
     let cancelled = false;
     const tick = async () => {
       try {
-        const snap = await invoke<{ controls: CapturedControl[] }>('learn_snapshot');
+        const snap = await invokeBackend<{ controls: CapturedControl[] }>('learn_snapshot');
         if (!cancelled) setCaptured(snap.controls);
-      } catch {
-        /* ignore */
+      } catch (error) {
+        console.warn('learn_snapshot falhou', error);
       }
     };
     const id = window.setInterval(tick, 700);
@@ -80,12 +80,12 @@ export function LearnWizard({ open, onClose }: { open: boolean; onClose: () => v
   }, [listening]);
 
   const startListening = useCallback(async () => {
-    if (!port && isTauri) return;
+    if (!port && isTauri()) return;
     try {
-      if (isTauri && port) {
+      if (isTauri() && port) {
         await backend.startListener(port);
       }
-      await invoke('learn_start', { device_id: deviceId, device_name: deviceName });
+      await invokeBackend('learn_start', { device_id: deviceId, device_name: deviceName });
       setListening(true);
       setPhase('pads');
     } catch (error) {
@@ -96,7 +96,7 @@ export function LearnWizard({ open, onClose }: { open: boolean; onClose: () => v
 
   const stopListening = useCallback(async () => {
     try {
-      await invoke('learn_stop');
+      await invokeBackend('learn_stop');
     } catch {
       /* ignore */
     }
@@ -109,7 +109,7 @@ export function LearnWizard({ open, onClose }: { open: boolean; onClose: () => v
     if (!next) return;
     if (listening) {
       try {
-        await invoke('learn_advance');
+        await invokeBackend('learn_advance');
       } catch {
         /* ignore */
       }
@@ -119,7 +119,7 @@ export function LearnWizard({ open, onClose }: { open: boolean; onClose: () => v
 
   const finalize = useCallback(async () => {
     try {
-      await invoke('learn_finalize');
+      await invokeBackend('learn_finalize');
       await bootstrap();
       onClose();
     } catch (error) {
@@ -385,18 +385,6 @@ function belongs(kind: string, phase: Phase): boolean {
   if (phase === 'buttons') return kind === 'button_toggle' || kind === 'button_momentary' || kind === 'button_trigger';
   if (phase === 'special') return kind === 'pitch' || kind === 'sustain';
   return true;
-}
-
-async function invoke<T>(command: string, payload: Record<string, unknown> = {}): Promise<T> {
-  if (!isTauri) return {} as T;
-  const { invoke: tauriInvoke } = await import('@tauri-apps/api/core');
-  type Result<X> = { ok: true; data: X } | { ok: false; error: string };
-  const result = await tauriInvoke<Result<T>>('backend_call', {
-    command,
-    payload: JSON.stringify(payload),
-  });
-  if (!result.ok) throw new Error(result.error);
-  return result.data;
 }
 
 export { ArrowLeft }; // silence unused import warning if needed

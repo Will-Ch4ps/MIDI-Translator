@@ -12,7 +12,7 @@ export function PathField({ value, onChange }: { value: string; onChange: (value
         placeholder="C:\\Programa.exe ou shell:Apps\\... ou https://..."
         style={{ flex: 1 }}
       />
-      {isTauri ? (
+      {isTauri() ? (
         <Button variant="secondary" size="md" onClick={() => void pickFile(onChange)}>
           Procurar
         </Button>

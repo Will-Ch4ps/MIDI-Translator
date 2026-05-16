@@ -40,8 +40,23 @@ fn backend_call(command: String, payload: Value) -> Result<Value, String> {
         .map_err(|err| format!("failed to start python backend: {err}"))?;
 
     let stdout = String::from_utf8_lossy(&output.stdout);
-    let response: Value = serde_json::from_str(stdout.trim())
-        .map_err(|err| format!("invalid backend response: {err}"))?;
+    let stderr = String::from_utf8_lossy(&output.stderr);
+    let trimmed = stdout.trim();
+
+    if trimmed.is_empty() {
+        let status = output.status.code().unwrap_or(-1);
+        return Err(format!(
+            "python backend retornou stdout vazio (exit {status}). stderr:\n{}",
+            stderr.trim()
+        ));
+    }
+
+    let response: Value = serde_json::from_str(trimmed).map_err(|err| {
+        format!(
+            "invalid backend response ({err}). stdout:\n{trimmed}\n\nstderr:\n{}",
+            stderr.trim()
+        )
+    })?;
 
     if response["ok"].as_bool() == Some(true) {
         Ok(response["data"].clone())

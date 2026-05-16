@@ -34,34 +34,36 @@ export function Dialog({
               />
             </RadixDialog.Overlay>
             <RadixDialog.Content asChild>
-              <motion.div
-                className={`ui-dialog ui-dialog--${size}`}
-                initial={{ opacity: 0, scale: 0.96, y: 8 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.97, y: 4 }}
-                transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-              >
-                {title || description ? (
-                  <header className="ui-dialog__head">
-                    <div>
-                      {title ? (
-                        <RadixDialog.Title className="ui-dialog__title">
-                          {title}
-                        </RadixDialog.Title>
-                      ) : null}
-                      {description ? (
-                        <RadixDialog.Description className="ui-dialog__desc">
-                          {description}
-                        </RadixDialog.Description>
-                      ) : null}
-                    </div>
-                    <RadixDialog.Close className="ui-dialog__close" aria-label="Fechar">
-                      <X size={16} />
-                    </RadixDialog.Close>
-                  </header>
-                ) : null}
-                <div className="ui-dialog__body">{children}</div>
-              </motion.div>
+              <div className="ui-dialog__viewport">
+                <motion.div
+                  className={`ui-dialog ui-dialog--${size}`}
+                  initial={{ opacity: 0, scale: 0.96, y: 8 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.97, y: 4 }}
+                  transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  {title || description ? (
+                    <header className="ui-dialog__head">
+                      <div>
+                        {title ? (
+                          <RadixDialog.Title className="ui-dialog__title">
+                            {title}
+                          </RadixDialog.Title>
+                        ) : null}
+                        {description ? (
+                          <RadixDialog.Description className="ui-dialog__desc">
+                            {description}
+                          </RadixDialog.Description>
+                        ) : null}
+                      </div>
+                      <RadixDialog.Close className="ui-dialog__close" aria-label="Fechar">
+                        <X size={16} />
+                      </RadixDialog.Close>
+                    </header>
+                  ) : null}
+                  <div className="ui-dialog__body">{children}</div>
+                </motion.div>
+              </div>
             </RadixDialog.Content>
           </RadixDialog.Portal>
         ) : null}
