@@ -160,6 +160,13 @@ def list_running_programs(_payload: dict[str, Any]) -> dict[str, Any]:
     return {"apps": discover_running_programs()}
 
 
+def list_programs(_payload: dict[str, Any]) -> dict[str, Any]:
+    """Abertos agora (nome amigável) + instalados no menu Iniciar, para o seletor da UI."""
+    from core.input.program_catalog import list_programs as catalog
+
+    return catalog()
+
+
 def test_action(payload: dict[str, Any]) -> dict[str, Any]:
     from core.input.keyboard import KeyboardEmitter
     from core.input.runner import ActionRunner
@@ -251,9 +258,14 @@ COMMANDS = {
     "swap_mappings": swap_mappings,
     "list_audio_targets": list_audio_targets,
     "list_running_programs": list_running_programs,
+    "list_programs": list_programs,
     "test_action": test_action,
     "inspect_target": inspect_target,
 }
+
+
+# Comandos que podem gravar o perfil (bootstrap remove vínculos de controles inexistentes).
+PROFILE_WRITERS = {"bootstrap", "save_mapping", "delete_mapping", "swap_mappings"}
 
 
 def _mappable_controls(layout) -> set[str]:
@@ -285,7 +297,15 @@ def main() -> int:
         return 2
 
     try:
-        _ok(handler(payload))
+        if command in PROFILE_WRITERS:
+            # Ler-alterar-gravar o perfil: um processo por vez, senão um sobrescreve o outro.
+            from core.fs import file_lock
+
+            with file_lock(ROOT / "profiles" / ".lock"):
+                result = handler(payload)
+        else:
+            result = handler(payload)
+        _ok(result)
         return 0
     except Exception as exc:  # noqa: BLE001
         print(f"[bridge] {type(exc).__name__}: {exc}", file=sys.stderr, flush=True)

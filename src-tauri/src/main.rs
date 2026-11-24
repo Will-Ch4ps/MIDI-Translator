@@ -22,7 +22,8 @@ fn app_root() -> Result<PathBuf, String> {
         .ok_or_else(|| "could not resolve app root".to_string())
 }
 
-#[tauri::command]
+// async: roda numa thread de fundo; sync rodaria na thread da janela e congelaria a UI.
+#[tauri::command(async)]
 fn backend_call(command: String, payload: Value) -> Result<Value, String> {
     let root = app_root()?;
     let payload_text = payload.to_string();

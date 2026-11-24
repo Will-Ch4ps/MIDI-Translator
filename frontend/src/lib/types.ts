@@ -44,6 +44,10 @@ export type AudioCatalog = {
   apps: { name: string; display: string; target: string }[];
 };
 
+/** Programa para o seletor: `target` é o que vai no vínculo (caminho ou shell:AppsFolder\…). */
+export type ProgramItem = { name: string; target: string; path: string };
+export type ProgramCatalog = { running: ProgramItem[]; installed: ProgramItem[] };
+
 export type TargetInspection = {
   status: "ok" | "warn" | "error" | "info";
   message: string;

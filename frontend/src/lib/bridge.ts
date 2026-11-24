@@ -5,6 +5,7 @@ import type {
   AudioCatalog,
   Bootstrap,
   ListenerStatus,
+  ProgramCatalog,
   Mapping,
   Profile,
   RuntimeEvent,
@@ -40,6 +41,7 @@ export const bridge = {
     call<Profile>("delete_mapping", { profile, control_id, trigger }),
   testAction: (action: Action, is_continuous = false) => call("test_action", { action, is_continuous }),
   audioTargets: () => call<AudioCatalog>("list_audio_targets"),
+  listPrograms: () => call<ProgramCatalog>("list_programs"),
   inspectTarget: (action_type: string, value: string) =>
     call<TargetInspection>("inspect_target", { action_type, value }),
 

@@ -6,6 +6,7 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from ..fs import write_text_atomic
 from ..mapper.models import Mapping
 
 
@@ -52,7 +53,7 @@ class ProfileManager:
 
     def save(self, profile: Profile) -> Path:
         path = self._path_for(profile.name)
-        path.write_text(json.dumps(profile.to_dict(), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        write_text_atomic(path, json.dumps(profile.to_dict(), indent=2, ensure_ascii=False) + "\n")
         return path
 
     def delete(self, name: str) -> None:

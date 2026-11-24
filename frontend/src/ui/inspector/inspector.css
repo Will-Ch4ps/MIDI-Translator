@@ -55,3 +55,20 @@
 .switch-state__now { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
 .check { display: flex; align-items: center; gap: 10px; min-height: 40px; font-size: 13px; color: var(--text); cursor: pointer; }
 .check input { width: 18px; height: 18px; accent-color: var(--accent); }
+
+/* Seletor de programas */
+.picker { display: flex; flex-direction: column; border-radius: 10px; border: 1px solid var(--line-2); background: var(--bg); overflow: hidden; }
+.picker__search { position: relative; display: flex; gap: 6px; padding: 6px; border-bottom: 1px solid var(--line); }
+.picker__icon { position: absolute; left: 16px; top: 18px; color: var(--text-3); pointer-events: none; }
+.picker__input { padding-left: 34px; background: var(--surface); }
+.picker__list { max-height: 248px; overflow-y: auto; padding: 4px; display: flex; flex-direction: column; gap: 2px; }
+.picker__group { padding: 8px 8px 4px; font-size: 11px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.06em; }
+.picker__msg { padding: 6px 8px; }
+.program { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 8px; border: 1px solid transparent; border-radius: 8px; background: none; text-align: left; font-size: 13px; }
+.program:hover { background: var(--raised); }
+.program.is-on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); }
+.program__avatar { display: grid; place-items: center; flex: 0 0 26px; height: 26px; border-radius: 7px; background: var(--hover); border: 1px solid var(--line-3); font-size: 12px; font-weight: 700; color: var(--text-2); }
+.program__name { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.program__open { font-size: 11px; color: var(--ok-text); }
+.spin { animation: spin 0.9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }

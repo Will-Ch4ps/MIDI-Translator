@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 
 from ..config.init import get_config
+from ..fs import write_text_atomic
 from .models import Control, ControlType, DeviceLayout
 from .presets import PRESETS
 
@@ -161,7 +162,4 @@ class DeviceManager:
             for item in payload["controls"]
             if not item.get("params", {}).get("virtual")
         ]
-        path.write_text(
-            json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
-            encoding="utf-8",
-        )
+        write_text_atomic(path, json.dumps(payload, indent=2, ensure_ascii=False) + "\n")

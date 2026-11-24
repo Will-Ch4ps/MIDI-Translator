@@ -1,5 +1,6 @@
 import type { Form, Kind, MediaOp } from "../../lib/actions";
 import { PathField } from "./fields/PathField";
+import { ProgramPicker } from "./fields/ProgramPicker";
 import { KeyField } from "./fields/KeyField";
 import { VolumeFields } from "./fields/VolumeFields";
 
@@ -15,7 +16,18 @@ const MEDIA: { id: MediaOp; label: string }[] = [
 export function KindFields({ kind, form, set, continuous }: Props) {
   switch (kind) {
     case "app":
-      return <PathField kind="app_launch" label="Programa" form={form} set={set} />;
+      return (
+        <>
+          <div className="field">
+            <span>Programa</span>
+            <ProgramPicker
+              value={form.path}
+              onPick={(program) => set({ path: program.target, label: form.label.trim() ? form.label : program.name })}
+            />
+          </div>
+          <PathField kind="app_launch" label="Ou o caminho (.exe, atalho .lnk…)" form={form} set={set} />
+        </>
+      );
     case "script":
       return (
         <>

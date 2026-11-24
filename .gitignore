@@ -23,6 +23,9 @@ Thumbs.db
 
 # dados pessoais do usuário (mapeamentos) — nunca versionar
 profiles/*.json
+profiles/.lock
+profiles/.*.tmp
+devices/.*.tmp
 # pastas soltas criadas por outros programas
 UserData/
 presets/
