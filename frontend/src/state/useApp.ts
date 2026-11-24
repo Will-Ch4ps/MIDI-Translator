@@ -35,7 +35,16 @@ export function useApp() {
     clearError: useCallback(() => setError(""), []),
     midi,
     listener,
-    saveMapping: (mapping: Mapping) => applyProfile(() => bridge.saveMapping(profileName, mapping)),
+    /** Aceita vários (ex.: "ao ligar" + "ao desligar") e reinicia o listener uma vez só. */
+    saveMapping: (input: Mapping | Mapping[]) =>
+      applyProfile(async () => {
+        let profile: Profile | undefined;
+        for (const mapping of Array.isArray(input) ? input : [input]) {
+          profile = await bridge.saveMapping(profileName, mapping);
+        }
+        if (!profile) throw new Error("nada para salvar");
+        return profile;
+      }),
     deleteMapping: (controlId: string, trigger: string) =>
       applyProfile(() => bridge.deleteMapping(profileName, controlId, trigger)),
     testAction: async (action: Action, continuous: boolean) => {

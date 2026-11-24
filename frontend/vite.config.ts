@@ -4,7 +4,8 @@ import { spawn } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+/** Pasta com backend/ e profiles/. `MIDI_ROOT` permite testar numa cópia sem tocar nos seus vínculos. */
+const ROOT = process.env.MIDI_ROOT ?? path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 /**
  * Só no `npm run dev` aberto no navegador: encaminha POST /__bridge para o

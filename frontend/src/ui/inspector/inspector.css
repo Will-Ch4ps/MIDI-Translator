@@ -50,3 +50,8 @@
 .inspector__foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 18px; border-top: 1px solid var(--line); }
 .inspector__save { display: flex; align-items: center; gap: 12px; }
 .inspector__status { font-size: 12px; color: var(--ok-text); }
+
+.switch-state { display: flex; flex-direction: column; gap: 6px; padding: 14px 18px 0; }
+.switch-state__now { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
+.check { display: flex; align-items: center; gap: 10px; min-height: 40px; font-size: 13px; color: var(--text); cursor: pointer; }
+.check input { width: 18px; height: 18px; accent-color: var(--accent); }

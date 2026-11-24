@@ -10,15 +10,20 @@ type Props = {
   mapping?: Mapping;
   trigger: Trigger;
   continuous: boolean;
+  /** Botões liga/desliga: opção de repetir a mesma ação no outro gatilho. */
+  mirror?: { trigger: Trigger; label: string; existing?: Mapping };
   app: AppState;
 };
 
+const sameAction = (a?: Mapping, b?: Mapping) => Boolean(a && b) && JSON.stringify(a?.action) === JSON.stringify(b?.action);
+
 /** Passo 1: o que faz. Passo 2: os campos daquele tipo. Salva um vínculo (controle + gatilho). */
-export function MappingEditor({ control, mapping, trigger, continuous, app }: Props) {
+export function MappingEditor({ control, mapping, trigger, continuous, mirror, app }: Props) {
   const [kind, setKind] = useState<Kind | null>(() => kindOf(mapping));
   const [form, setForm] = useState<Form>(() => formFrom(mapping));
   const [status, setStatus] = useState("");
   const [saving, setSaving] = useState(false);
+  const [mirrored, setMirrored] = useState(() => sameAction(mapping, mirror?.existing));
 
   const set = (patch: Partial<Form>) => {
     setForm((current) => ({ ...current, ...patch }));
@@ -33,7 +38,8 @@ export function MappingEditor({ control, mapping, trigger, continuous, app }: Pr
     // Mantém parâmetros que a UI não mostra (ex.: knob_mode) quando o tipo não mudou.
     const params = mapping?.action.type === action.type ? { ...mapping.action.params, ...action.params } : action.params;
     const label = form.label.trim() || suggestion;
-    const ok = await app.saveMapping({ control_id: control.id, trigger, label, action: { type: action.type, params } });
+    const saved = { control_id: control.id, trigger, label, action: { type: action.type, params } };
+    const ok = await app.saveMapping(mirror && mirrored ? [saved, { ...saved, trigger: mirror.trigger }] : saved);
     setSaving(false);
     setStatus(ok ? (app.listener.running ? "Salvo e já valendo" : "Salvo") : "");
   }
@@ -43,6 +49,7 @@ export function MappingEditor({ control, mapping, trigger, continuous, app }: Pr
       setKind(null);
       return;
     }
+    if (mirror && mirrored && mirror.existing) await app.deleteMapping(control.id, mirror.trigger);
     if (await app.deleteMapping(control.id, trigger)) {
       setKind(null);
       setForm(emptyForm());
@@ -71,6 +78,12 @@ export function MappingEditor({ control, mapping, trigger, continuous, app }: Pr
               />
             </label>
             <KindFields kind={kind} form={form} set={set} continuous={continuous} />
+            {mirror && (
+              <label className="check">
+                <input type="checkbox" checked={mirrored} onChange={(e) => { setMirrored(e.target.checked); setStatus(""); }} />
+                {mirror.label}
+              </label>
+            )}
           </section>
         )}
       </div>

@@ -56,7 +56,11 @@ export const bridge = {
   launchContext: () => native("launch_context", {}, { autostart_launch: false }),
 
   async subscribeRuntime(handler: (event: RuntimeEvent) => void): Promise<() => void> {
-    if (!inTauri()) return () => {};
+    if (!inTauri()) {
+      // Só em dev: permite simular eventos no console com window.__midi({...}).
+      if (import.meta.env.DEV) (window as unknown as { __midi?: typeof handler }).__midi = handler;
+      return () => {};
+    }
     return listen<RuntimeEvent>("midi-runtime", (event) => handler(event.payload));
   },
 };

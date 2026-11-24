@@ -9,15 +9,17 @@ type Props = {
   selected: boolean;
   hit: boolean;
   compact?: boolean;
+  /** Botão liga/desliga: true/false quando o estado é conhecido. */
+  switchOn?: boolean;
   onSelect: (id: string) => void;
 };
 
 /** Um pad ou botão: número/nome em cima, o que ele faz embaixo. */
-export function ControlTile({ id, name, mappings, selected, hit, compact, onSelect }: Props) {
+export function ControlTile({ id, name, mappings, selected, hit, compact, switchOn, onSelect }: Props) {
   const main = primary(mappings);
   const kind = kindOf(main);
   const extra = mappings.length - 1;
-  const cls = ["tile", compact && "tile--compact", !main && "tile--free", selected && "is-selected", hit && "is-hit"]
+  const cls = ["tile", compact && "tile--compact", !main && "tile--free", selected && "is-selected", hit && "is-hit", switchOn && "is-switched"]
     .filter(Boolean)
     .join(" ");
 
@@ -30,11 +32,14 @@ export function ControlTile({ id, name, mappings, selected, hit, compact, onSele
       onClick={() => onSelect(id)}
     >
       <span className="tile__top">
-        <span className="tile__name">{name}</span>
-        {kind && <span className="tag">{KIND_TAG[kind]}</span>}
+        <span className="tile__name">
+          {switchOn !== undefined && <span className={`tile__led${switchOn ? " is-on" : ""}`} title={switchOn ? "Ligado" : "Desligado"} />}
+          {name}
+        </span>
+        {kind && !compact && <span className="tag">{KIND_TAG[kind]}</span>}
       </span>
       {main ? (
-        <span className="tile__label">{main.label || "Sem nome"}</span>
+        <span className="tile__label" title={main.label}>{main.label || "Sem nome"}</span>
       ) : (
         <span className="tile__free">{compact ? "Livre" : "+ Vincular"}</span>
       )}

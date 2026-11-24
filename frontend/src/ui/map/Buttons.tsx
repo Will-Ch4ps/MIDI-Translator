@@ -5,6 +5,7 @@ import { ControlTile } from "./ControlTile";
 type Props = {
   buttons: Control[];
   extras: Control[];
+  switches: Record<string, boolean>;
   index: MappingIndex;
   active: Set<string>;
   selected: string;
@@ -13,7 +14,7 @@ type Props = {
 
 const EXTRA_NAME: Record<string, string> = { PITCH: "Pitch", MOD: "Mod", SUSTAIN: "Sustain" };
 
-export function Buttons({ buttons, extras, index, active, selected, onSelect }: Props) {
+export function Buttons({ buttons, extras, switches, index, active, selected, onSelect }: Props) {
   const tile = (control: Control, name: string) => (
     <ControlTile
       key={control.id}
@@ -22,7 +23,8 @@ export function Buttons({ buttons, extras, index, active, selected, onSelect }: 
       compact
       mappings={index.get(control.id) ?? []}
       selected={control.id === selected}
-      hit={active.has(control.id)}
+      hit={control.type !== "button_toggle" && active.has(control.id)}
+      switchOn={control.type === "button_toggle" ? switches[control.id] : undefined}
       onSelect={onSelect}
     />
   );

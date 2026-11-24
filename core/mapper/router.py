@@ -3,12 +3,22 @@ from __future__ import annotations
 
 import sys
 import time
+from dataclasses import replace
 from threading import Timer
 from typing import Any
 
 from ..device.models import Control, ControlType, control_priority
 from ..midi.events import MidiEvent
 from .models import Mapping, TriggerMode
+
+# Botões e pedal mandam CC (0/127), mas são liga/desliga, não contínuos:
+# precisam do fluxo press/release para "ao ligar" e "ao desligar" funcionarem.
+ON_OFF_TYPES = {
+    ControlType.BUTTON_MOMENTARY,
+    ControlType.BUTTON_TOGGLE,
+    ControlType.BUTTON_TRIGGER,
+    ControlType.SUSTAIN,
+}
 
 
 class Router:
@@ -116,7 +126,7 @@ class Router:
         return control, self._mappings[control.id]
 
     def _dispatch(self, control: Control, scoped: dict[TriggerMode, Mapping], event: MidiEvent) -> None:
-        if event.is_continuous:
+        if event.is_continuous and control.type not in ON_OFF_TYPES:
             self._dispatch_continuous(scoped, event)
             return
 
@@ -171,7 +181,8 @@ class Router:
 
         release_mapping = scoped.get(TriggerMode.RELEASE)
         if release_mapping:
-            self._fire(release_mapping, event)
+            # O soltar/desligar É o momento do gatilho: as ações só executam com pressed=True.
+            self._fire(release_mapping, replace(event, pressed=True))
 
         if hold_fired:
             self._press_events.pop(control_id, None)

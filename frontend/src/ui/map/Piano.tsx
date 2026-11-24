@@ -1,16 +1,19 @@
 import type { CSSProperties } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { isBlackKey, keyId, noteName, type MappingIndex } from "../../lib/layout";
 
 type Props = {
   start: number;
   count: number;
+  octave: number;
+  onOctave: (octave: number) => void;
   index: MappingIndex;
   active: Set<string>;
   selected: string;
   onSelect: (id: string) => void;
 };
 
-export function Piano({ start, count, index, active, selected, onSelect }: Props) {
+export function Piano({ start, count, octave, onOctave, index, active, selected, onSelect }: Props) {
   const notes = Array.from({ length: count }, (_, i) => start + i).filter((n) => n >= 0 && n <= 127);
   const whites = notes.filter((n) => !isBlackKey(n));
   const whiteWidth = 100 / whites.length;
@@ -45,8 +48,19 @@ export function Piano({ start, count, index, active, selected, onSelect }: Props
       <div className="card__head">
         <h2 className="card__title">Teclado · {notes.length} teclas</h2>
         <span className="hint">
-          {mappedKeys > 0 ? `${mappedKeys} com atalho · ` : ""}As teclas tocam notas normalmente. Clique numa para vincular um atalho.
+          {mappedKeys > 0 ? `${mappedKeys} com atalho · ` : ""}Clique numa tecla para vincular um atalho.
         </span>
+        <div className="octave" role="group" aria-label="Oitava mostrada">
+          <button type="button" className="octave__btn" aria-label="Oitava abaixo" disabled={octave <= -4} onClick={() => onOctave(octave - 1)}>
+            <ChevronLeft size={16} aria-hidden="true" />
+          </button>
+          <span className="octave__label" title="Acompanha sozinho quando você toca fora da faixa">
+            Oitava {octave > 0 ? `+${octave}` : octave}
+          </span>
+          <button type="button" className="octave__btn" aria-label="Oitava acima" disabled={octave >= 4} onClick={() => onOctave(octave + 1)}>
+            <ChevronRight size={16} aria-hidden="true" />
+          </button>
+        </div>
       </div>
       <div className="piano">
         <div className="piano__whites">{whites.map((note) => key(note))}</div>
