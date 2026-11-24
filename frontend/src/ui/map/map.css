@@ -1,0 +1,72 @@
+.map { flex: 1; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px; padding: 16px 20px 20px; }
+.map__device { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.map__title { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.map__title h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
+.map__row { display: flex; flex-wrap: wrap; gap: 12px; }
+.map__knobs { flex: 3 1 340px; min-width: 0; }
+.map__buttons { flex: 2 1 280px; min-width: 0; }
+
+.banks { display: flex; align-items: center; gap: 4px; padding: 4px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); }
+.banks__label { padding: 0 8px 0 6px; color: var(--text-3); font-size: 12px; font-weight: 500; }
+.banks__item { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px; border: 0; border-radius: 7px; background: none; color: var(--text-2); font-size: 14px; font-weight: 600; }
+.banks__item:hover { color: var(--text); }
+.banks__item.is-on { background: #2a3442; color: var(--text); }
+.banks__count { font-family: var(--mono); font-size: 11px; opacity: 0.75; }
+
+/* Pads e botões */
+.pads { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.buttons { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.tile {
+  display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 8px;
+  min-height: 96px; padding: 12px 14px; border-radius: var(--radius); text-align: left;
+  background: var(--raised); border: 1px solid var(--line-2);
+  transition: border-color 120ms, background 120ms, transform 80ms;
+}
+.tile:hover { border-color: var(--line-3); background: var(--hover); }
+.tile--compact { min-height: 60px; padding: 8px 10px; gap: 4px; }
+.tile--free { background: transparent; border-style: dashed; }
+.tile.is-selected { background: var(--accent-soft); border: 1px solid var(--accent); box-shadow: 0 0 0 3px rgba(77, 163, 255, 0.18); }
+.tile.is-hit { border-color: var(--ok); box-shadow: 0 0 0 3px rgba(61, 214, 140, 0.3); transform: scale(0.98); }
+.tile__top { display: flex; justify-content: space-between; align-items: center; gap: 6px; width: 100%; }
+.tile__name { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+.tile__label { font-size: 15px; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
+.tile--compact .tile__label { font-size: 13px; }
+.tile__free { font-size: 13px; color: var(--text-3); }
+.tile__more { font-size: 11px; color: var(--accent); }
+
+/* Knobs */
+.knobs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.knob {
+  display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px;
+  border-radius: var(--radius); background: transparent; border: 1px solid transparent;
+}
+.knob:hover { background: var(--raised); }
+.knob.is-selected { background: var(--accent-soft); border-color: var(--accent); }
+.knob svg { transform: rotate(135deg); }
+.knob__track, .knob__level { fill: none; stroke-width: 3.5; stroke-linecap: round; }
+.knob__track { stroke: var(--line-3); }
+.knob__level { stroke: var(--accent); transition: stroke-dasharray 60ms linear; }
+.knob__label { font-size: 13px; font-weight: 600; text-align: center; overflow-wrap: anywhere; }
+.knob__sub { font-size: 11px; color: var(--text-3); }
+.knob--free .knob__label { color: var(--text-2); font-weight: 500; }
+
+/* Piano */
+.piano { position: relative; height: 112px; }
+.piano__whites { display: flex; height: 100%; }
+.key { border: 0; padding: 0; }
+.key--white {
+  flex: 1 1 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 8px;
+  background: #cbd3dd; border-right: 3px solid var(--surface); border-radius: 0 0 6px 6px;
+}
+.key--white:hover { background: #dde3ea; }
+.key--black {
+  position: absolute; top: 0; height: 62%; z-index: 1;
+  background: #161b22; border: 1px solid #0a0c10; border-radius: 0 0 5px 5px;
+}
+.key--black:hover { background: #222a34; }
+.key.is-mapped::after { content: ""; display: block; width: 6px; height: 6px; margin: 0 auto; border-radius: 50%; background: var(--accent); }
+.key--black.is-mapped::after { position: absolute; left: 50%; bottom: 8px; margin-left: -3px; }
+.key--white.is-mapped { flex-direction: column; align-items: center; gap: 4px; }
+.key.is-selected { background: var(--accent); }
+.key.is-hit { background: var(--ok); }
+.key__name { font-size: 10px; font-weight: 600; color: #3a4554; }

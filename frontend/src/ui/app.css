@@ -1,0 +1,27 @@
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+
+.header {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; flex-wrap: wrap; gap: 10px 20px;
+  padding: 10px 20px; background: var(--bar); border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; letter-spacing: -0.01em; }
+.nav { display: flex; gap: 4px; }
+.nav__tab { height: 38px; padding: 0 14px; border: 0; border-radius: 8px; background: none; color: var(--text-2); font-weight: 500; }
+.nav__tab:hover { color: var(--text); }
+.nav__tab.is-on { background: var(--hover); color: var(--text); font-weight: 600; }
+.header__spacer { flex: 1 1 0; }
+
+.status {
+  display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; border-radius: 999px;
+  border: 1px solid var(--line-2); color: var(--text-2); font-size: 13px; font-weight: 500;
+}
+.status__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-3); }
+.status.is-on { background: rgba(61, 214, 140, 0.1); border-color: rgba(61, 214, 140, 0.35); color: var(--ok-text); }
+.status.is-on .status__dot { background: var(--ok); box-shadow: 0 0 0 3px rgba(61, 214, 140, 0.18); }
+
+.errorbar {
+  display: flex; align-items: center; gap: 12px; margin: 12px 20px 0; padding: 8px 8px 8px 14px;
+  border-radius: 10px; background: rgba(240, 138, 138, 0.1); border: 1px solid rgba(240, 138, 138, 0.4);
+}
+.errorbar__text { flex: 1; min-width: 0; color: #ffc9c9; font-size: 13px; white-space: pre-wrap; word-break: break-word; }

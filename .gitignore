@@ -13,8 +13,6 @@ target/
 target*/
 frontend/dist/
 src-tauri/target/
-tmp path/
-tmp run/
 *.log
 .DS_Store
 Thumbs.db
@@ -22,3 +20,9 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# dados pessoais do usuário (mapeamentos) — nunca versionar
+profiles/*.json
+# pastas soltas criadas por outros programas
+UserData/
+presets/

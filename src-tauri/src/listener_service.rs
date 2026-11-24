@@ -65,6 +65,7 @@ fn app_root() -> Result<PathBuf, String> {
 
 fn resolve_default_binding() -> Result<(String, String, String), String> {
     let mut bridge = Command::new("py");
+    bridge.env("PYTHONIOENCODING", "utf-8").env("PYTHONUTF8", "1");
     bridge
         .args(["-3", "backend/bridge.py", "bootstrap", "{}"])
         .current_dir(app_root()?);
@@ -228,6 +229,7 @@ pub fn listener_start(
     ];
 
     let mut command = Command::new("py");
+    command.env("PYTHONIOENCODING", "utf-8").env("PYTHONUTF8", "1");
     command
         .args(args)
         .current_dir(app_root()?)
